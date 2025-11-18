@@ -2,6 +2,7 @@
 """Main starter script: loads a universe, fetches basics via yfinance,
 computes simple scores and writes top N portfolio.
 """
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -74,13 +75,41 @@ def compute_scores(df):
 
 
 def main():
+    print("Starte Value/Moat Portfolio Picker...\n")
     universe = load_universe()
-    print('universe size', len(universe))
+    print(f'Universe size: {len(universe)} Aktien\n')
+
     df = gather(universe)
-    scored = compute_scores(df)
-    portfolio = construct_portfolio(scored, n=PORTFOLIO_SIZE)
+    portfolio = compute_scores(df)
+    portfolio = construct_portfolio(portfolio, n=PORTFOLIO_SIZE)
+
+    # Gewichte in Prozent
+    portfolio['weight_%'] = (portfolio['weight'] * 100).round(1).astype(str) + '%'
+
+    # Nur die Spalten, die du willst – sauber formatiert
+    display_df = portfolio[[
+        'ticker', 'marketCap', 'sector',
+        'trailingPE', 'forwardPE', 'beta',
+        'returnOnEquity', 'debtToEquity', 'dataroma_buy',
+        'value_score', 'quality_score', 'final_score', 'weight_%'
+    ]].copy()
+
+    # Formatierung
+    display_df['marketCap'] = (display_df['marketCap'] / 1e9).round(1).astype(str) + ' Mrd'
+    display_df['trailingPE'] = display_df['trailingPE'].round(1)
+    display_df['forwardPE'] = display_df['forwardPE'].round(1)
+    display_df['beta'] = display_df['beta'].round(2)
+    display_df['returnOnEquity'] = (display_df['returnOnEquity'] * 100).round(1).astype(str) + '%'
+    display_df['value_score'] = display_df['value_score'].round(3)
+    display_df['quality_score'] = display_df['quality_score'].round(3)
+    display_df['final_score'] = display_df['final_score'].round(3)
+
+    print(display_df.to_string(index=False))
+    print(f"\nPortfolio-Beta: {portfolio['beta'].mean():.2f}")
+    print(f"Durchschn. Forward P/E: {portfolio['forwardPE'].mean():.1f}")
+
     save_portfolio(portfolio, 'examples/selected_portfolio.csv')
-    print('done. saved examples/selected_portfolio.csv')
+    print('\ndone. → examples/selected_portfolio.csv')
 
 
 if __name__ == '__main__':
