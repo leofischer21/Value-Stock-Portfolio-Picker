@@ -9,6 +9,7 @@ from datetime import datetime
 from src.portfolio import construct_portfolio, save_portfolio
 from src.dataroma import get_superinvestor_data
 
+
 # === CONFIG ===
 MIN_MARKET_CAP = 30_000_000_000
 PORTFOLIO_SIZE = 20
@@ -138,7 +139,58 @@ def compute_scores(df):
     return df.sort_values('final_score', ascending=False)
 
 
+# Am Anfang von main() – direkt nach dem Start
+from datetime import datetime
+
 def main():
+    print("Starte Deep Value + Community Moat Picker\n")
+    universe = load_universe()
+    print(f"Universe: {len(universe)} Aktien\n")
+
+    df = gather(universe)
+    portfolio = compute_scores(df).head(PORTFOLIO_SIZE)
+    portfolio = construct_portfolio(portfolio, n=PORTFOLIO_SIZE)
+
+    # Gewichte
+    portfolio['weight_%'] = (portfolio['weight'] * 100).round(1).astype(str) + '%'
+
+    # === NEU: Timestamp für eindeutige Dateinamen ===
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    filename = f"examples/portfolio_{timestamp}.csv"
+    # ===============================================
+
+    # Ausgabe (wie vorher)
+    out = portfolio[[
+        'ticker', 'marketCap', 'sector',
+        'trailingPE', 'forwardPE', 'beta',
+        'returnOnEquity', 'debtToEquity',
+        'superinvestor_score', 'reddit_score', 'x_score',
+        'final_score', 'weight_%'
+    ]].copy()
+
+    # Formatierung (wie vorher)
+    out['marketCap'] = (out['marketCap'] / 1e9).round(1).astype(str) + ' Mrd'
+    out['trailingPE'] = out['trailingPE'].round(1)
+    out['forwardPE'] = out['forwardPE'].round(1)
+    out['beta'] = out['beta'].round(2)
+    out['returnOnEquity'] = (out['returnOnEquity'] * 100).round(1).astype(str) + '%'
+    out['debtToEquity'] = out['debtToEquity'].round(1)
+    out['superinvestor_score'] = out['superinvestor_score'].round(3)
+    out['reddit_score'] = out['reddit_score'].round(3)
+    out['x_score'] = out['x_score'].round(3)
+    out['final_score'] = out['final_score'].round(3)
+
+    print(out.to_string(index=False))
+    print(f"\nPortfolio-Beta: {portfolio['beta'].mean():.2f}")
+    print(f"Durchschn. Forward P/E: {portfolio['forwardPE'].mean():.1f}")
+
+    # === NEU: Speichern mit Timestamp ===
+    save_portfolio(portfolio, filename)  # nutzt deine alte Funktion
+    print(f"\nGespeichert als → {filename}")
+    # =====================================
+
+
+""" def main():
     print("Starte Deep Value + Community Moat Picker\n")
     universe = load_universe()
     print(f"Universe: {len(universe)} Aktien\n")
@@ -176,7 +228,7 @@ def main():
     print(f"Durchschn. Forward P/E: {portfolio['forwardPE'].mean():.1f}")
 
     save_portfolio(portfolio, 'examples/selected_portfolio.csv')
-    print(f"\nFertig → examples/selected_portfolio.csv ({datetime.now().strftime('%d.%m.%Y %H:%M')})")
+    print(f"\nFertig → examples/selected_portfolio.csv ({datetime.now().strftime('%d.%m.%Y %H:%M')})") """
 
 
 if __name__ == '__main__':
