@@ -34,4 +34,4 @@ conda activate valuepicker
 python src/run_picker.py
 
 # 4. Dashboard starten
-streamlit run dashboard.py
+streamlit run dashboard_final.py
