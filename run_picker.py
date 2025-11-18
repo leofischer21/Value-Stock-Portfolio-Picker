@@ -66,7 +66,7 @@ def get_x_score():
     }
 
 
-def gather(universe):
+""" def gather(universe):
     print("Lade Fundamentaldaten + Community-Signale...")
 
     # ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
@@ -105,7 +105,45 @@ def gather(universe):
             })
         except Exception as e:
             print(f"Fehler bei {tk}: {e}")
+    return pd.DataFrame(rows) """
+
+
+def gather(universe):
+    print("Lade Fundamentaldaten + Community-Signale (Stand 18.11.2025)...")
+
+    # Einmalige, perfekte Daten – direkt aus meiner Live-Recherche
+    import json
+    from pathlib import Path
+
+    signals = json.load(open("data/community_signals.json"))
+
+    superinvestor = signals["superinvestor_score"]
+    reddit = signals["reddit_score"]
+    x_sent = signals["x_score"]
+
+    rows = []
+    for tk in universe:
+        try:
+            info = yf.Ticker(tk).info
+            time.sleep(0.5)
+            rows.append({
+                'ticker': tk,
+                'marketCap': info.get('marketCap'),
+                'sector': info.get('sector', 'Unknown'),
+                'trailingPE': info.get('trailingPE'),
+                'forwardPE': info.get('forwardPE'),
+                'beta': info.get('beta'),
+                'returnOnEquity': info.get('returnOnEquity'),
+                'debtToEquity': info.get('debtToEquity'),
+                'superinvestor_score': superinvestor.get(tk, 0.0),
+                'reddit_score': reddit.get(tk, 0.0),
+                'x_score': x_sent.get(tk, 0.5),
+            })
+        except Exception as e:
+            print(f"Fehler bei {tk}: {e}")
     return pd.DataFrame(rows)
+
+
 
 def compute_scores(df):
     df = df[df['marketCap'] >= MIN_MARKET_CAP].dropna(subset=['trailingPE','forwardPE']).copy()

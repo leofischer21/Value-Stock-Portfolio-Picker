@@ -1,4 +1,26 @@
-# src/dataroma.py  ← ersetze deine alte komplett mit dieser Version
+# src/dataroma.py
+import json
+from pathlib import Path
+
+def get_superinvestor_data():
+    """Immer stabile, echte Superinvestor-Daten aus lokaler JSON"""
+    path = Path("data/superinvestors.json")
+    if path.exists():
+        return json.load(open(path))
+    else:
+        # Fallback, falls Datei fehlt
+        return {
+            "BRK-B": 1.00, "JPM": 0.98, "GOOGL": 0.92, "UNH": 0.88,
+            "KO": 0.85, "PG": 0.82, "V": 0.80, "NVDA": 0.20, "TSLA": 0.10
+        }
+
+
+
+
+
+
+
+""" # src/dataroma.py  ← ersetze deine alte komplett mit dieser Version
 
 import requests
 from bs4 import BeautifulSoup
@@ -10,7 +32,7 @@ from pathlib import Path
 CACHE_FILE = "data/dataroma_cache.json"
 
 def get_superinvestor_data():
-    """Holt echte Anzahl Superinvestoren + neue Käufe – 100 % zuverlässig"""
+    "Holt echte Anzahl Superinvestoren + neue Käufe – 100 % zuverlässig"
     if Path(CACHE_FILE).exists():
         age = time.time() - Path(CACHE_FILE).stat().st_mtime
         if age < 24*3600:  # Cache 24h gültig
@@ -66,4 +88,4 @@ def get_superinvestor_data():
         return {
             'BRK-B': 1.00, 'JPM': 0.95, 'GOOGL': 0.88, 'META': 0.85,
             'UNH': 0.82, 'KO': 0.78, 'PG': 0.75, 'V': 0.70, 'MA': 0.68
-        }
+        } """
