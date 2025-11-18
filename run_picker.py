@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 import time
 from datetime import datetime
 from src.portfolio import construct_portfolio, save_portfolio
+from src.dataroma import get_superinvestor_data
 
 # === CONFIG ===
 MIN_MARKET_CAP = 30_000_000_000
@@ -66,15 +67,28 @@ def get_x_score():
 
 def gather(universe):
     print("Lade Fundamentaldaten + Community-Signale...")
+
+    # ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
+    # ALTE ZEILEN (löschen oder auskommentieren):
+    # superinvestor_dict = get_superinvestor_data()
+    # reddit_dict = get_reddit_score()
+    # x_dict = get_x_score()
+
+    # NEUE ZEILEN (einfach ersetzen!):
+    from src.dataroma import get_superinvestor_data
+    from src.reddit import get_reddit_mentions
+    from src.twitter import get_x_sentiment_score
+
     superinvestor_dict = get_superinvestor_data()
-    reddit_dict = get_reddit_score()
-    x_dict = get_x_score()
+    reddit_dict = get_reddit_mentions(universe)           # ← jetzt dynamisch!
+    x_dict = get_x_sentiment_score(universe)              # ← jetzt dynamisch!
+    # ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
 
     rows = []
     for tk in universe:
         try:
             info = yf.Ticker(tk).info
-            time.sleep(0.5)  # yfinance freundlich
+            time.sleep(0.5)
             rows.append({
                 'ticker': tk,
                 'marketCap': info.get('marketCap'),
@@ -91,7 +105,6 @@ def gather(universe):
         except Exception as e:
             print(f"Fehler bei {tk}: {e}")
     return pd.DataFrame(rows)
-
 
 def compute_scores(df):
     df = df[df['marketCap'] >= MIN_MARKET_CAP].dropna(subset=['trailingPE','forwardPE']).copy()
