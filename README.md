@@ -1,32 +1,37 @@
-# Value-Stock-Portfolio-Picker
+# Value Stock Portfolio Picker
 
-**Goal:** automatisches Screening / Ranking großer, qualitativ hochwertiger und unterbewerteter Aktien (MarketCap ≥ 30bn) und Vorschlag eines diversifizierten Portfolios (20–25 Titel). Starter-Repo mit Data ingestion (yfinance, dataroma), Scoring, Portfolio-Konstruktion und Rebalancing-Regeln.
+Automatisches Screening großer, qualitativ hochwertiger Aktien mit starker Community-Unterstützung.  
+Kombiniert klassische Value-/Quality-Kennzahlen mit realen Signalen von Superinvestoren, r/ValueInvesting und X (Twitter).
+
+→ Ergebnis: ein diversifiziertes 20-Titel-Portfolio, das monatlich aktualisiert wird.
+
+## Features (Stand 2025)
+
+- Market-Cap-Filter ≥ 30 Mrd. USD  
+- Value-Score (Trailing-PE + Forward-PE)  
+- Quality-Score (ROE + Verschuldung)  
+- Community-Score (gleich gewichtet)  
+  - Superinvestoren (Dataroma-ähnliche Daten, manuell kuratiert)  
+  - Reddit-Sentiment (r/ValueInvesting)  
+  - X-Sentiment (Value-Twitter-Community)  
+- Gewichtung: 50 % Fundamentaldaten + 50 % Community  
+- Timestamp-basierte Historie (nie überschreiben)  
+- Schickes Streamlit-Dashboard inkl. Sektorverteilung & Bubble-Charts  
+- 100 % lokal lauffähig, voll reproduzierbar
 
 ## Quickstart
-1. Clone repo
-2. Create conda env: `conda env create -f environment.yml`
-3. Activate: `conda activate value_portfolio_picker`
-4. Run demo: `python src/run_picker.py`
 
-## Struktur
-- `environment.yml`, `requirements.txt` — dependencies
-- `src/` — core modules
-  - `run_picker.py` — main starter script (MVP)
-  - `fetch_dataroma.py` — scraper to fetch recent superinvestor buys from dataroma
-  - `portfolio.py` — portfolio construction + rebalancing logic
-- `notebooks/demo_colab.ipynb` — interactive demo (cells in repo)
-- `examples/selected_portfolio.csv` — example output
+```bash
+# 1. Repo klonen
+git clone https://github.com/leofischer21/Value-Stock-Portfolio-Picker.git
+cd Value-Stock-Portfolio-Picker
 
-## Design
-- Universe: S&P500 + Nasdaq100 (user can extend)
-- Filters: marketCap ≥ 30_000_000_000
-- Scoring: Weighted combination of Valuation (PE/PFCF), Quality (ROE, margins), Moat proxies (consistent ROIC/margins), Superinvestor interest, Risk (beta)
-- Rebalancing: monthly cadence + threshold-based replacements to avoid churn
+# 2. Conda-Umgebung erstellen & aktivieren
+conda env create -f environment.yml
+conda activate valuepicker
 
-## Data sources & legal
-- Uses Yahoo Finance (`yfinance`) for fundamentals; Dataroma scraping for superinvestor buys. Respect Terms of Service and rate limits.
+# 3. Portfolio berechnen (neue CSV mit Timestamp wird erstellt)
+python src/run_picker.py
 
-## Next steps / Improvements
-- Add Morningstar fair value ingestion (requires subscription / API)
-- Backtesting engine (zipline/backtrader)
-- Chart-image parsing pipeline using Tesseract + PlotDigitizer
+# 4. Dashboard starten
+streamlit run dashboard.py

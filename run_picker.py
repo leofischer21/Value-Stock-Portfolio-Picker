@@ -115,7 +115,7 @@ def gather(universe):
     import json
     from pathlib import Path
 
-    signals = json.load(open("data/community_signals.json"))
+    signals = json.load(open("src/data/community_signals.json"))
 
     superinvestor = signals["superinvestor_score"]
     reddit = signals["reddit_score"]
@@ -162,17 +162,23 @@ def compute_scores(df):
 
     # Community Score (20% Gewicht)
     df['community_score'] = (
-        df['superinvestor_score'] * 0.5 +
-        df['reddit_score'] * 0.25 +
-        df['x_score'] * 0.25
+        df['superinvestor_score'] * 0.35 +
+        df['reddit_score'] * 0.35 +
+        df['x_score'] * 0.30
     )
 
     # Final Score
-    df['final_score'] = (
+    """ df['final_score'] = (
         df['value_score'] * 0.50 +
         df['quality_score'] * 0.30 +
         df['community_score'] * 0.20
-    )
+    ) """
+
+    df['final_score'] = (
+        df['value_score']     * 0.30 +   # ← runter von 50 %
+        df['quality_score']   * 0.20 +   # ← runter von 30 %
+        df['community_score'] * 0.50     # ← hoch von 20 %      ← Community dominiert jetzt!
+)
 
     return df.sort_values('final_score', ascending=False)
 
