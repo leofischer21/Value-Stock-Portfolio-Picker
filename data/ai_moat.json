@@ -1,0 +1,26 @@
+{
+  "last_updated": "2025-11-18",
+  "ki_moat_score": {
+    "BRK-B": 1.00,
+    "JPM": 0.95,
+    "GOOGL": 0.94,
+    "META": 0.92,
+    "KO": 0.92,
+    "PG": 0.90,
+    "V": 0.92,
+    "MA": 0.90,
+    "UNH": 0.88,
+    "MSFT": 0.88,
+    "AAPL": 0.85,
+    "CSCO": 0.78,
+    "ORCL": 0.75,
+    "HD": 0.72,
+    "PEP": 0.70,
+    "ADBE": 0.68,
+    "AMZN": 0.65,
+    "CRM": 0.62,
+    "NVDA": 0.60,
+    "TSLA": 0.45
+  },
+  "comment": "1.00 = nahezu unzerstörbarer Moat + exzellente Zukunftsperspektive 3–5 Jahre, 0.45 = starker Moat aber hohe Unsicherheit/Bewertung"
+}

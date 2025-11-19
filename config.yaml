@@ -1,0 +1,19 @@
+# Configuration for Value Stock Portfolio Picker
+# You can override these values locally. The runner will attempt to load PyYAML
+# If PyYAML is not installed, defaults in the code are used.
+
+portfolio_size: 20
+min_market_cap: 30000000000
+
+weights:
+  value: 0.30
+  quality: 0.20
+  community: 0.30
+  pe_vs_history: 0.08
+  insider: 0.05
+  analyst: 0.05
+  ki_moat: 0.07
+
+alpha_vantage_key: "DEMO"
+
+cache_ttl_seconds: 86400

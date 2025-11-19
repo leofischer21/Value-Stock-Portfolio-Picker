@@ -4,18 +4,17 @@ import time
 from collections import Counter
 import json
 from pathlib import Path
+from src.cache import get as cache_get, set as cache_set
 
-CACHE_FILE = "data/reddit_cache.json"
 
-def get_reddit_mentions(universe_tickers, days_back=120):
+def get_reddit_mentions(universe_tickers, days_back=120, ttl_seconds: int = 24*3600):
     """
     Scraped r/ValueInvesting für die letzten ~4 Monate
     Gibt zurück: {ticker: score 0.0–1.0} basierend auf Mention-Häufigkeit
     """
-    if Path(CACHE_FILE).exists():
-        age = time.time() - Path(CACHE_FILE).stat().stmtime
-        if age < 24*3600:  # 24h Cache
-            return json.load(open(CACHE_FILE))
+    cached = cache_get("reddit_mentions")
+    if cached:
+        return cached
 
     headers = {'User-Agent': 'ValuePortfolioBot/1.0 (by /u/leofischer21)'}
     base_url = "https://www.reddit.com/r/ValueInvesting/search.json"
@@ -30,8 +29,8 @@ def get_reddit_mentions(universe_tickers, days_back=120):
 
     mentions = Counter()
     try:
-        r = requests.get(base_url, headers=headers, params=params, timeout=15)
-        data = r.json()
+        from src.http import get_json
+        data = get_json(base_url, params=params, headers=headers, timeout=15) or {}
         
         for post in data.get('data', {}).get('children', []):
             text = post['data']['title'] + " " + post['data'].get('selftext', '')
@@ -47,9 +46,11 @@ def get_reddit_mentions(universe_tickers, days_back=120):
             score_dict = {t: round(count / max_count * 0.8 + 0.2, 3) for t, count in mentions.items()}
         else:
             score_dict = {t: 0.3 for t in universe_tickers}  # neutral fallback
-        
-        Path("data").mkdir(exist_ok=True)
-        json.dump(score_dict, open(CACHE_FILE, "w"))
+
+        try:
+            cache_set("reddit_mentions", score_dict, ttl_seconds=ttl_seconds)
+        except Exception:
+            pass
         return score_dict
 
     except Exception as e:

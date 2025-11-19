@@ -1,15 +1,15 @@
 # src/x_sentiment.py
+import time
 import json
 from pathlib import Path
+from src.cache import get as cache_get, set as cache_set
 
-CACHE_FILE = "data/x_sentiment_cache.json"
 
-def get_x_sentiment_score(universe_tickers):
+def get_x_sentiment_score(universe_tickers, ttl_seconds: int = 24*3600):
     """Echte X-Sentiment-Daten (manuell kuratiert + live-aktualisiert)"""
-    if Path(CACHE_FILE).exists():
-        age = time.time() - Path(CACHE_FILE).stat().stmtime
-        if age < 24*3600:
-            return json.load(open(CACHE_FILE))
+    cached = cache_get("x_sentiment")
+    if cached:
+        return cached
 
     # Aktuelle Sentiment-Werte (basierend auf @qualtrim, @DimitryNakhla, etc.)
     sentiment = {
@@ -20,7 +20,9 @@ def get_x_sentiment_score(universe_tickers):
     }
 
     score_dict = {t: sentiment.get(t, 0.5) for t in universe_tickers}
-    
-    Path("data").mkdir(exist_ok=True)
-    json.dump(score_dict, open(CACHE_FILE, "w"))
+
+    try:
+        cache_set("x_sentiment", score_dict, ttl_seconds=ttl_seconds)
+    except Exception:
+        pass
     return score_dict
