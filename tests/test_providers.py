@@ -5,12 +5,12 @@ import pandas as pd
 # Ensure repo root is importable
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.data_providers import (
+from scripts.data_providers import (
     get_pe_history_features,
     get_insider_summary,
     get_analyst_summary,
 )
-from src import cache as scache
+from scripts import cache as scache
 
 
 class DummyTicker:

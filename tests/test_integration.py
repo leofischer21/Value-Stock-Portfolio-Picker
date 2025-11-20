@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import pandas as pd
 import pytest
-from run_picker_2 import gather, compute_scores
+from scripts.run_picker_2 import gather, compute_scores
 
 
 class DummyCommunity:
@@ -16,7 +16,7 @@ class DummyCommunity:
 
 @pytest.fixture(autouse=True)
 def patch_community(monkeypatch):
-    import src.community as community
+    import scripts.community as community
     monkeypatch.setattr(community, 'load_community_signals', DummyCommunity.load_community_signals)
     monkeypatch.setattr(community, 'load_ai_moat', lambda: {'AAA': 0.2, 'BBB': 0.1})
     yield
@@ -29,7 +29,7 @@ def stub_fetch_fundamentals(monkeypatch):
             'AAA': {'marketCap': 1e9, 'sector': 'Tech', 'trailingPE': 10, 'forwardPE': 9, 'beta': 1.0, 'returnOnEquity': 0.2, 'debtToEquity': 10, 'recommendationMean': 3.0},
             'BBB': {'marketCap': 2e9, 'sector': 'Finance', 'trailingPE': 20, 'forwardPE': 18, 'beta': 0.8, 'returnOnEquity': 0.1, 'debtToEquity': 5, 'recommendationMean': 2.5},
         }
-    import src.data_providers as dp
+    import scripts.data_providers as dp
     monkeypatch.setattr(dp, 'fetch_fundamentals', _fake)
     yield
 

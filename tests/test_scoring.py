@@ -4,8 +4,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import pandas as pd
 import numpy as np
-from run_picker_2 import compute_scores
-from src.portfolio import construct_portfolio
+from scripts.run_picker_2 import compute_scores
+from scripts.portfolio import construct_portfolio
 
 
 def make_sample_df():
