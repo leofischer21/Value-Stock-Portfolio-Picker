@@ -118,6 +118,63 @@ def _normalize_info(info: dict) -> dict:
         except Exception:
             out['forwardPE'] = None
 
+    # ROIC (Return on Invested Capital)
+    roic = _safe_float(info.get('returnOnInvestedCapital') or info.get('roic'))
+    if roic is None:
+        # Fallback: Calculate from operatingIncome / (totalAssets - currentLiabilities)
+        operating_income = _safe_float(info.get('operatingIncome') or info.get('operatingCashflow'))
+        total_assets = _safe_float(info.get('totalAssets'))
+        current_liabilities = _safe_float(info.get('currentLiabilities'))
+        if operating_income is not None and total_assets is not None and current_liabilities is not None:
+            invested_capital = total_assets - current_liabilities
+            if invested_capital and invested_capital > 0:
+                roic = operating_income / invested_capital
+    if roic is not None:
+        # Normalize percent format (>1 -> /100)
+        if roic > 1:
+            roic = roic / 100.0
+        out['returnOnInvestedCapital'] = roic
+    else:
+        out['returnOnInvestedCapital'] = None
+
+    # Profit Margins
+    def _normalize_margin(margin_val):
+        if margin_val is None:
+            return None
+        try:
+            m = float(margin_val)
+            # Normalize percent format (>1 -> /100)
+            if m > 1:
+                m = m / 100.0
+            return m
+        except Exception:
+            return None
+
+    gross_margin = _normalize_margin(info.get('grossMargins'))
+    operating_margin = _normalize_margin(info.get('operatingMargins'))
+    profit_margin = _normalize_margin(info.get('profitMargins'))
+    
+    out['grossMargins'] = gross_margin
+    out['operatingMargins'] = operating_margin
+    out['profitMargins'] = profit_margin
+    
+    # Calculate average margin from available margins
+    margins = [m for m in [gross_margin, operating_margin, profit_margin] if m is not None]
+    if margins:
+        out['avgMargin'] = sum(margins) / len(margins)
+    else:
+        out['avgMargin'] = None
+
+    # EV/EBITDA
+    ev_ebitda = _safe_float(info.get('enterpriseToEbitda') or info.get('enterpriseValueMultiple'))
+    if ev_ebitda is None:
+        # Fallback: Calculate from enterpriseValue / ebitda
+        enterprise_value = _safe_float(info.get('enterpriseValue'))
+        ebitda = _safe_float(info.get('ebitda'))
+        if enterprise_value is not None and ebitda is not None and ebitda > 0:
+            ev_ebitda = enterprise_value / ebitda
+    out['enterpriseToEbitda'] = ev_ebitda
+
     return out
 
 
@@ -126,6 +183,23 @@ def _fetch_single(tk: str) -> tuple[str, dict]:
         t = yf.Ticker(tk)
         info = _safe_info(t)
         norm = _normalize_info(info)
+        
+        # Calculate 12M Price Momentum
+        try:
+            hist = t.history(period="1y")[['Close']].dropna()
+            if not hist.empty and len(hist) > 0:
+                current_price = norm.get('currentPrice') or (hist['Close'].iloc[-1] if not hist.empty else None)
+                price_12m_ago = hist['Close'].iloc[0] if len(hist) > 0 else None
+                if current_price is not None and price_12m_ago is not None and price_12m_ago > 0:
+                    momentum = ((current_price / price_12m_ago) - 1) * 100  # in percent
+                    norm['priceMomentum12M'] = momentum
+                else:
+                    norm['priceMomentum12M'] = None
+            else:
+                norm['priceMomentum12M'] = None
+        except Exception:
+            norm['priceMomentum12M'] = None
+        
         return tk, norm
     except Exception as e:
         logger.debug("Fehler beim Laden von %s: %s", tk, e)
@@ -157,8 +231,8 @@ def fetch_fundamentals(universe: List[str], max_workers: int = 8) -> Dict[str, D
 
 from datetime import datetime, timedelta
 
-from scripts.cache import get as cache_get, set as cache_set
-from scripts.httpx import get_text
+from cache import get as cache_get, set as cache_set
+from httpx import get_text
 
 
 def get_pe_history_features(ticker: str, cache_ttl: int = 7 * 24 * 3600) -> Dict[str, Any]:

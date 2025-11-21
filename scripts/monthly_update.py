@@ -89,6 +89,12 @@ def update_financials(tickers: List[str], month: str = None) -> None:
                     'beta': info.get('beta'),
                     'returnOnEquity': info.get('returnOnEquity'),
                     'debtToEquity': info.get('debtToEquity'),
+                    'returnOnInvestedCapital': info.get('returnOnInvestedCapital'),
+                    'grossMargins': info.get('grossMargins'),
+                    'operatingMargins': info.get('operatingMargins'),
+                    'profitMargins': info.get('profitMargins'),
+                    'enterpriseToEbitda': info.get('enterpriseToEbitda'),
+                    'priceMomentum12M': info.get('priceMomentum12M'),
                 }
                 # Only add if we have at least some key data
                 if row['marketCap'] is not None or row['trailingPE'] is not None:
@@ -122,9 +128,14 @@ def update_financials(tickers: List[str], month: str = None) -> None:
         raise
 
 
-def update_sentiments(tickers: List[str]) -> Dict:
+def update_sentiments(tickers: List[str], financials_df: pd.DataFrame = None) -> Dict:
     """
     Lädt alle Sentiment-Daten für die gegebenen Ticker.
+    
+    Args:
+        tickers: List of ticker symbols
+        financials_df: Optional DataFrame with ticker, marketCap, sector columns for dynamic fallback generation
+    
     Returns: Dict mit superinvestor_score, reddit_score, x_score
     """
     try:
@@ -137,14 +148,14 @@ def update_sentiments(tickers: List[str]) -> Dict:
         
         # Load Reddit sentiment
         logger.info("Loading Reddit sentiment...")
-        reddit_scores = get_reddit_mentions(tickers, days_back=120)
+        reddit_scores = get_reddit_mentions(tickers, days_back=120, financials_df=financials_df)
         if not reddit_scores:
             raise ValueError("Failed to load Reddit sentiment data")
         logger.info(f"Reddit: {len(reddit_scores)} tickers scored")
         
         # Load X sentiment
         logger.info("Loading X (Twitter) sentiment...")
-        x_scores = get_x_sentiment_score(tickers)
+        x_scores = get_x_sentiment_score(tickers, financials_df=financials_df)
         if not x_scores:
             raise ValueError("Failed to load X sentiment data")
         logger.info(f"X: {len(x_scores)} tickers scored")
@@ -155,6 +166,32 @@ def update_sentiments(tickers: List[str]) -> Dict:
         if not superinvestor_scores:
             raise ValueError("Failed to load Superinvestor data")
         logger.info(f"Superinvestor: {len(superinvestor_scores)} tickers scored")
+        
+        # Validate scores - check for too many neutral/default values
+        def validate_scores(score_dict: Dict, score_name: str, threshold: float = 0.5, max_neutral_ratio: float = 0.7):
+            """Check if too many scores are at the neutral/default value"""
+            if not score_dict:
+                logger.warning(f"{score_name}: Empty score dictionary")
+                return False
+            
+            neutral_count = sum(1 for v in score_dict.values() if abs(v - threshold) < 0.01)
+            total_count = len(score_dict)
+            neutral_ratio = neutral_count / total_count if total_count > 0 else 1.0
+            
+            if neutral_ratio > max_neutral_ratio:
+                logger.warning(
+                    f"{score_name}: {neutral_count}/{total_count} ({neutral_ratio*100:.1f}%) scores are neutral ({threshold}). "
+                    f"This might indicate scraping issues or missing data."
+                )
+                return False
+            
+            logger.info(f"{score_name}: {neutral_count}/{total_count} ({neutral_ratio*100:.1f}%) neutral scores (acceptable)")
+            return True
+        
+        # Validate each score type
+        validate_scores(superinvestor_scores, "Superinvestor", threshold=0.5, max_neutral_ratio=0.6)
+        validate_scores(reddit_scores, "Reddit", threshold=0.3, max_neutral_ratio=0.7)
+        validate_scores(x_scores, "X/Twitter", threshold=0.5, max_neutral_ratio=0.5)
         
         # Combine into single dict
         result = {
@@ -170,6 +207,183 @@ def update_sentiments(tickers: List[str]) -> Dict:
     except Exception as e:
         logger.error(f"Failed to update sentiments: {e}")
         raise
+
+
+def update_extended_scores(tickers: List[str], month: str = None) -> None:
+    """
+    Lädt PE History und Analyst Scores für alle Ticker.
+    Speichert in data/extended_scores/YYYY-MM.json und latest.json
+    """
+    try:
+        logger.info(f"Loading extended scores (PE History & Analyst) for {len(tickers)} tickers...")
+        
+        # Import data_providers
+        from data_providers import get_pe_history_features, get_analyst_summary
+        
+        pe_history_data = {}
+        analyst_data = {}
+        
+        # Process tickers with progress logging
+        for i, ticker in enumerate(tickers):
+            if (i + 1) % 50 == 0:
+                logger.info(f"Processing extended scores: {i + 1}/{len(tickers)}")
+            
+            try:
+                # PE History
+                pe_feats = get_pe_history_features(ticker)
+                pe_history_data[ticker] = {
+                    'pe_current': pe_feats.get('pe_current'),
+                    'pe_low_2y': pe_feats.get('pe_low_2y'),
+                    'pe_low_5y': pe_feats.get('pe_low_5y'),
+                    'pe_score': pe_feats.get('pe_score', 0.5)
+                }
+                
+                # Analyst Summary
+                analyst_summary = get_analyst_summary(ticker)
+                analyst_data[ticker] = {
+                    'analyst_score': analyst_summary.get('analyst_score', 0.5),
+                    'recommendationMean': analyst_summary.get('recommendationMean'),
+                    'targetMeanPrice': analyst_summary.get('targetMeanPrice'),
+                    'target_delta': analyst_summary.get('target_delta')
+                }
+            except Exception as e:
+                logger.debug(f"Error loading extended scores for {ticker}: {e}")
+                # Use defaults on error
+                pe_history_data[ticker] = {
+                    'pe_current': None,
+                    'pe_low_2y': None,
+                    'pe_low_5y': None,
+                    'pe_score': 0.5
+                }
+                analyst_data[ticker] = {
+                    'analyst_score': 0.5,
+                    'recommendationMean': None,
+                    'targetMeanPrice': None,
+                    'target_delta': None
+                }
+        
+        # Combine into single dict
+        result = {
+            "last_updated": datetime.now().strftime("%Y-%m-%d"),
+            "pe_history": pe_history_data,
+            "analyst": analyst_data
+        }
+        
+        # Determine month
+        if month is None:
+            month = datetime.now().strftime("%Y-%m")
+        
+        # Save to data/extended_scores/
+        extended_scores_dir = ROOT_DIR / "data/extended_scores"
+        extended_scores_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save monthly file
+        monthly_path = extended_scores_dir / f"{month}.json"
+        with open(monthly_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        logger.info(f"Saved extended scores to {monthly_path}")
+        
+        # Save latest file
+        latest_path = extended_scores_dir / "latest.json"
+        with open(latest_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        logger.info(f"Saved extended scores to {latest_path}")
+        
+    except Exception as e:
+        logger.error(f"Failed to update extended scores: {e}")
+        raise
+
+
+def update_ai_scores(tickers: List[str], financials_df: pd.DataFrame, scores_dict: Dict, month: str = None) -> None:
+    """
+    Berechnet KI-Scores (Moat, Quality, Predicted Performance) für alle Ticker.
+    Speichert in data/ai_scores/YYYY-MM.json und latest.json
+    """
+    try:
+        logger.info(f"Calculating AI scores for {len(tickers)} tickers...")
+        
+        # Import AI scores module
+        from ai_scores import get_ai_moat_score, get_ai_quality_score, get_ai_predicted_performance
+        
+        moat_scores = {}
+        quality_scores = {}
+        predicted_performance = {}
+        
+        # Create mapping from ticker to financial data
+        financials_dict = financials_df.set_index('ticker').to_dict('index')
+        
+        # Process tickers with progress logging
+        for i, ticker in enumerate(tickers):
+            if (i + 1) % 50 == 0:
+                logger.info(f"Processing AI scores: {i + 1}/{len(tickers)}")
+            
+            try:
+                # Get financial data for this ticker
+                financial_data = financials_dict.get(ticker, {})
+                
+                # Get existing scores
+                existing_scores = {
+                    'community_score': (
+                        scores_dict.get('superinvestor_score', {}).get(ticker, 0.5) * 0.333 +
+                        scores_dict.get('reddit_score', {}).get(ticker, 0.5) * 0.333 +
+                        scores_dict.get('x_score', {}).get(ticker, 0.5) * 0.334
+                    ),
+                    'quality_score': 0.5  # Will be calculated separately
+                }
+                
+                # Calculate AI scores
+                moat_score = get_ai_moat_score(ticker, financial_data, existing_scores)
+                quality_score = get_ai_quality_score(ticker, financial_data, existing_scores)
+                performance_pred = get_ai_predicted_performance(ticker, financial_data, existing_scores)
+                
+                moat_scores[ticker] = moat_score
+                quality_scores[ticker] = quality_score
+                predicted_performance[ticker] = performance_pred
+                
+            except Exception as e:
+                logger.debug(f"Error calculating AI scores for {ticker}: {e}")
+                # Use defaults on error
+                moat_scores[ticker] = 0.5
+                quality_scores[ticker] = 0.5
+                predicted_performance[ticker] = {
+                    'cagr_1y': 8.0,
+                    'cagr_2y': 8.0,
+                    'cagr_5y': 8.0,
+                    'cagr_10y': 8.0
+                }
+        
+        # Combine into single dict
+        result = {
+            "last_updated": datetime.now().strftime("%Y-%m-%d"),
+            "moat_scores": moat_scores,
+            "quality_scores": quality_scores,
+            "predicted_performance": predicted_performance
+        }
+        
+        # Determine month
+        if month is None:
+            month = datetime.now().strftime("%Y-%m")
+        
+        # Save to data/ai_scores/
+        ai_scores_dir = ROOT_DIR / "data/ai_scores"
+        ai_scores_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save monthly file
+        monthly_path = ai_scores_dir / f"{month}.json"
+        with open(monthly_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        logger.info(f"Saved AI scores to {monthly_path}")
+        
+        # Save latest file
+        latest_path = ai_scores_dir / "latest.json"
+        with open(latest_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        logger.info(f"Saved AI scores to {latest_path}")
+        
+    except Exception as e:
+        logger.error(f"Failed to update AI scores: {e}")
+        # Don't raise - AI scores are optional, continue with fallbacks
+        logger.warning("Continuing without AI scores - will use fallback values")
 
 
 def save_scores(scores: Dict, month: str = None) -> None:
@@ -216,11 +430,40 @@ def main():
         month = datetime.now().strftime("%Y-%m")
         update_financials(tickers, month)
         
-        # Step 3: Update sentiments
-        scores = update_sentiments(tickers)
+        # Step 3: Load financials_df for dynamic fallback generation
+        financials_path = ROOT_DIR / "data/financials/latest.csv"
+        financials_df = None
+        if financials_path.exists():
+            try:
+                financials_df = pd.read_csv(financials_path)
+                logger.info(f"Loaded financials_df with {len(financials_df)} tickers for fallback generation")
+            except Exception as e:
+                logger.warning(f"Could not load financials_df: {e}. Will use basic fallbacks.")
         
-        # Step 4: Save scores
+        # Step 4: Update extended scores (PE History & Analyst)
+        update_extended_scores(tickers, month)
+        
+        # Step 5: Update sentiments (with financials_df for dynamic fallbacks)
+        scores = update_sentiments(tickers, financials_df=financials_df)
+        
+        # Step 6: Save sentiment scores
         save_scores(scores, month)
+        
+        # Step 7: Update AI scores (requires financials and scores)
+        # Reload financials_df if not already loaded
+        if financials_df is None:
+            financials_path = ROOT_DIR / "data/financials/latest.csv"
+            if financials_path.exists():
+                try:
+                    financials_df = pd.read_csv(financials_path)
+                except Exception as e:
+                    logger.warning(f"Could not load financials_df for AI scores: {e}")
+                    financials_df = None
+        
+        if financials_df is not None:
+            update_ai_scores(tickers, financials_df, scores, month)
+        else:
+            logger.warning("Financials not available for AI score calculation - skipping")
         
         logger.info("=" * 60)
         logger.info("Monthly update completed successfully!")

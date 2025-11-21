@@ -4,18 +4,146 @@ import json
 from pathlib import Path
 from collections import Counter
 from datetime import datetime, timedelta
-from scripts.cache import get as cache_get, set as cache_set
+import pandas as pd
+from cache import get as cache_get, set as cache_set
 
 
-def _get_static_fallback(universe_tickers):
-    """Fallback auf statische Werte, falls Scraping fehlschlägt"""
-    sentiment = {
-        'GOOGL': 0.92, 'META': 0.90, 'BRK-B': 0.88, 'JPM': 0.85, 'COST': 0.95,
-        'KO': 0.82, 'PG': 0.80, 'UNH': 0.75, 'V': 0.70, 'MA': 0.68,
-        'CSCO': 0.65, 'AMZN': 0.60, 'MSFT': 0.55, 'AAPL': 0.50,
-        'NVDA': 0.45, 'TSLA': 0.30
+def _generate_fallback_scores(universe_tickers, financials_df=None):
+    """
+    Generiert realistische Fallback-Scores für X/Twitter basierend auf:
+    - Marktkapitalisierung (größer = mehr Diskussion = höherer Score)
+    - Sektor (Technology bekommt höheren Bonus als bei Reddit)
+    - Bekanntheit (FAANG, Blue Chips = höhere Scores)
+    - Growth vs. Value (Growth-Stocks bekommen niedrigere Scores)
+    
+    Args:
+        universe_tickers: List of ticker symbols
+        financials_df: Optional DataFrame with ticker, marketCap, sector columns
+    
+    Returns:
+        Dict mapping ticker -> score (0.0-0.9)
+    """
+    # Base score (neutral, höher als Reddit da X/Twitter mehr Tech-fokussiert ist)
+    base_score = 0.5
+    
+    # Sektor-Gewichtungen (X/Twitter Präferenzen - Technology höher als Reddit)
+    sector_bonuses = {
+        'Technology': 0.15,  # Höher als Reddit (0.05)
+        'Financial Services': 0.20,
+        'Consumer Defensive': 0.18,
+        'Healthcare': 0.15,
+        'Communication Services': 0.12,  # Höher als Reddit (0.05)
+        'Consumer Cyclical': 0.10,
+        'Energy': 0.10,
+        'Industrials': 0.10,
+        'Utilities': 0.12,
+        'Real Estate': 0.10,
+        'Basic Materials': 0.10,
     }
-    return {t: sentiment.get(t, 0.5) for t in universe_tickers}
+    
+    # Growth-Stocks mit niedrigeren Scores (Value-Investing weniger relevant)
+    growth_stocks = {
+        'NVDA': -0.15, 'TSLA': -0.20, 'AMD': -0.10, 'PLTR': -0.10,
+        'NFLX': -0.05, 'META': 0.0,  # META ist bekannt, aber Growth
+    }
+    
+    # Bekannte Ticker mit zusätzlichem Bonus
+    known_tickers = {
+        # FAANG/MAANG
+        'AAPL': 0.10, 'MSFT': 0.10, 'AMZN': 0.10, 'GOOGL': 0.15, 'GOOG': 0.15,
+        'META': 0.10, 'NFLX': 0.05,
+        # Value Investing Favorites
+        'BRK-B': 0.15, 'BRK.B': 0.15, 'JPM': 0.15, 'BAC': 0.10, 'WFC': 0.10,
+        'COST': 0.15, 'WMT': 0.12, 'KO': 0.12, 'PG': 0.12,
+        # Other Blue Chips
+        'JNJ': 0.12, 'UNH': 0.12, 'V': 0.12, 'MA': 0.12, 'HD': 0.10,
+    }
+    
+    scores = {}
+    
+    # If financials_df is available, use it for dynamic calculation
+    if financials_df is not None and not financials_df.empty:
+        # Create lookup dictionaries
+        ticker_to_mcap = financials_df.set_index('ticker')['marketCap'].to_dict()
+        ticker_to_sector = financials_df.set_index('ticker')['sector'].to_dict()
+        
+        for ticker in universe_tickers:
+            score = base_score
+            
+            # Market Cap Bonus
+            mcap = ticker_to_mcap.get(ticker, 0)
+            if mcap and mcap > 0:
+                if mcap > 500_000_000_000:  # > 500B
+                    score += 0.4
+                elif mcap > 200_000_000_000:  # 200B-500B
+                    score += 0.3
+                elif mcap > 100_000_000_000:  # 100B-200B
+                    score += 0.2
+                elif mcap > 50_000_000_000:  # 50B-100B
+                    score += 0.1
+            
+            # Sektor Bonus
+            sector = ticker_to_sector.get(ticker, 'Unknown')
+            if sector and sector in sector_bonuses:
+                score += sector_bonuses[sector]
+            
+            # Growth-Stock Penalty
+            if ticker in growth_stocks:
+                score += growth_stocks[ticker]
+            
+            # Bekanntheits-Bonus
+            if ticker in known_tickers:
+                score += known_tickers[ticker]
+            
+            # Cap at 0.9 (leave room for scraped data)
+            scores[ticker] = round(max(0.2, min(0.9, score)), 3)
+    else:
+        # Fallback: use known_tickers and default base_score
+        for ticker in universe_tickers:
+            score = base_score
+            if ticker in known_tickers:
+                score += known_tickers[ticker]
+            if ticker in growth_stocks:
+                score += growth_stocks[ticker]
+            scores[ticker] = round(max(0.2, min(0.9, score)), 3)
+    
+    return scores
+
+
+def _get_static_fallback(universe_tickers, financials_df=None):
+    """Fallback auf statische Werte, falls Scraping fehlschlägt"""
+    # Manual overrides for specific tickers (these take priority)
+    manual_overrides = {
+        # Very high sentiment (frequently discussed by value investors on X)
+        'COST': 0.95, 'GOOGL': 0.92, 'META': 0.90, 'BRK-B': 0.88,
+        'JPM': 0.85, 'KO': 0.82, 'PG': 0.80, 'UNH': 0.75,
+        # High sentiment
+        'V': 0.70, 'MA': 0.68, 'WMT': 0.75, 'HD': 0.72,
+        'TGT': 0.78, 'SBUX': 0.70, 'NKE': 0.65, 'LOW': 0.68,
+        # Medium-high sentiment
+        'CSCO': 0.65, 'AMZN': 0.60, 'MSFT': 0.55, 'AAPL': 0.50,
+        'BAC': 0.65, 'WFC': 0.60, 'GS': 0.68, 'MS': 0.65,
+        'JNJ': 0.70, 'LLY': 0.65, 'ABBV': 0.60, 'MRK': 0.65,
+        'PFE': 0.55, 'TMO': 0.60, 'AVGO': 0.58, 'ORCL': 0.55,
+        # Medium sentiment
+        'NVDA': 0.45, 'TSLA': 0.30, 'XOM': 0.50, 'CVX': 0.45,
+        'DIS': 0.55, 'NFLX': 0.50, 'CMCSA': 0.45, 'VZ': 0.40,
+        'TM': 0.50, 'BABA': 0.45, 'ASML': 0.60, 'TSM': 0.65,
+        'INTC': 0.40, 'AMD': 0.35
+    }
+    
+    # Generate dynamic fallback scores for all tickers
+    generated_fallbacks = _generate_fallback_scores(universe_tickers, financials_df=financials_df)
+    
+    # Combine: manual overrides take priority, then generated scores
+    result = {}
+    for ticker in universe_tickers:
+        if ticker in manual_overrides:
+            result[ticker] = manual_overrides[ticker]
+        else:
+            result[ticker] = generated_fallbacks.get(ticker, 0.5)
+    
+    return result
 
 
 def _scrape_twitter_mentions(universe_tickers, days_back=120):
@@ -27,7 +155,7 @@ def _scrape_twitter_mentions(universe_tickers, days_back=120):
     mentions = Counter()
     
     try:
-        from scripts.httpx import get_text
+        from httpx import get_text
         
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -121,7 +249,7 @@ def _scrape_twitter_mentions(universe_tickers, days_back=120):
         return Counter()
 
 
-def get_x_sentiment_score(universe_tickers, days_back=120, ttl_seconds: int = 24*3600):
+def get_x_sentiment_score(universe_tickers, days_back=120, ttl_seconds: int = 24*3600, financials_df=None):
     """
     X-Sentiment-Daten: Scraped Twitter/X Mentions der letzten 3-4 Monate.
     
@@ -137,7 +265,7 @@ def get_x_sentiment_score(universe_tickers, days_back=120, ttl_seconds: int = 24
         Dict mapping ticker -> score (0.0-1.0) für ALLE Ticker in universe_tickers
     """
     # IMMER mit statischen Werten starten (das ist die Basis)
-    static_base = _get_static_fallback(universe_tickers)
+    static_base = _get_static_fallback(universe_tickers, financials_df=financials_df)
     score_dict = static_base.copy()
     
     # Prüfe Cache - aber nur für gescrapte Updates, nicht als Basis

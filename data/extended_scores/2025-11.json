@@ -1,0 +1,3427 @@
+{
+  "last_updated": "2025-11-21",
+  "pe_history": {
+    "NVDA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AAPL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MSFT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GOOGL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AMZN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AVGO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "META": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TSLA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TSM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BRK-B": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "LLY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "WMT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "JPM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "V": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ORCL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "XOM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "JNJ": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NFLX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ABBV": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ASML": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "COST": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BAC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PLTR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BABA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AMD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "KO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CVX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CSCO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "UNH": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SAP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AZN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "IBM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "WFC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CAT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NVS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AXP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MRK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TMUS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HSBC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RTX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MU": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MCD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ABT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TMO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NVO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CRM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SHEL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PEP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ISRG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "LIN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SHOP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DIS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AMGN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "T": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "INTU": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "APP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NEE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AMAT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "LRCX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HDB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "C": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "UBER": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MUFG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "VZ": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SONY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "QCOM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NOW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TJX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BLK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SCHW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "INTC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PDD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "APH": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DHR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GILD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SAN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GEV": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ANET": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ACN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SPGI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BKNG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "UL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "KLAC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BSX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ARM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TXN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PFE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TTE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SYK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "WELL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BHP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PGR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "UNP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ADBE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PANW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "COF": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "LOW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ETN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MDT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CRWD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SPOT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SNY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "UBS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HON": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RIO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BBVA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BTI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BUD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PLD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "IBN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ADI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HCA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SMFG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "LMT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "COP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CEG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "VRTX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ENB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MCK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PH": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "KKR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ADP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CME": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SCCO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CMCSA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CVS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MELI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HOOD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DUK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SBUX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BMY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GSK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NKE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NEM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MMC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MMM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "WM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ICE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BMO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MCO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AMT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ORLY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NTES": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SNOW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BNS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CDNS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PBR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PBR-A": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MFG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NOC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BAM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DASH": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SHW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AEM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HWM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DELL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "UPS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MAR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "REGN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ITUB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TDG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AON": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NU": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ECL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NGG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "EQIX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CTAS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "APO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CRH": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ING": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "USB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RELX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BCS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PNC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "WMB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MDLZ": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "INFY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SNPS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CNQ": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MNST": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "COR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ITW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ELV": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "EMR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RACE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "JCI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "EPD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RCL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AMX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CVNA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SPG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ABNB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RSG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "LYG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NET": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GLW": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MRVL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AEP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "RBLX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "COIN": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CMI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TRV": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PWR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AZO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "GM": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AJG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TEL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NSC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CSX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "FDX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "HLT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MSI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ADSK": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "VRT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "B": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "NWG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "KMI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "EQNR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SRE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ALNY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "VST": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TRI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "FTNT": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "AFL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "WDAY": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "EOG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MFC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ET": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "E": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "FCX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TFC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "CNI": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ARGX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "WBD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "TRP": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MPC": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DDOG": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "APD": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ALL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "DLR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "IDXX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MPLX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PYPL": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "BDX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SU": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PSX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "LHX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "SLB": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "STX": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ROST": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "VLO": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "D": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "O": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "VALE": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "PCAR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "ZTS": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "MSTR": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    },
+    "EA": {
+      "pe_current": null,
+      "pe_low_2y": null,
+      "pe_low_5y": null,
+      "pe_score": 0.5
+    }
+  },
+  "analyst": {
+    "NVDA": {
+      "analyst_score": 0.8211528232949514,
+      "recommendationMean": 1.34375,
+      "targetMeanPrice": 246.31648,
+      "target_delta": 0.3635766164747566
+    },
+    "AAPL": {
+      "analyst_score": 0.6616417276995304,
+      "recommendationMean": 2.0,
+      "targetMeanPrice": 281.74805,
+      "target_delta": 0.0582086384976525
+    },
+    "MSFT": {
+      "analyst_score": 0.8250073051230065,
+      "recommendationMean": 1.24138,
+      "targetMeanPrice": 624.8638,
+      "target_delta": 0.3060715256150324
+    },
+    "GOOGL": {
+      "analyst_score": 0.75247659828986,
+      "recommendationMean": 1.45455,
+      "targetMeanPrice": 319.34888,
+      "target_delta": 0.10329549144930047
+    },
+    "AMZN": {
+      "analyst_score": 0.8218541606336925,
+      "recommendationMean": 1.32836,
+      "targetMeanPrice": 294.34213,
+      "target_delta": 0.3555408031684628
+    },
+    "AVGO": {
+      "analyst_score": 0.7860765929588835,
+      "recommendationMean": 1.28261,
+      "targetMeanPrice": 396.18652,
+      "target_delta": 0.1423404647944178
+    },
+    "META": {
+      "analyst_score": 0.8225152158194008,
+      "recommendationMean": 1.41176,
+      "targetMeanPrice": 837.4155,
+      "target_delta": 0.4213960790970041
+    },
+    "TSLA": {
+      "analyst_score": 0.5562820074640082,
+      "recommendationMean": 2.61702,
+      "targetMeanPrice": 392.9278,
+      "target_delta": -0.005824962679958575
+    },
+    "TSM": {
+      "analyst_score": 0.7670077288288288,
+      "recommendationMean": 1.52941,
+      "targetMeanPrice": 341.90668,
+      "target_delta": 0.23209614414414412
+    },
+    "BRK-B": {
+      "analyst_score": 0.6609940533205618,
+      "recommendationMean": 2.0,
+      "targetMeanPrice": 528.6667,
+      "target_delta": 0.05497026660280968
+    },
+    "LLY": {
+      "analyst_score": 0.6790368050637885,
+      "recommendationMean": 1.76667,
+      "targetMeanPrice": 1012.1859,
+      "target_delta": -0.029813474681057058
+    },
+    "WMT": {
+      "analyst_score": 0.7606793216319672,
+      "recommendationMean": 1.34884,
+      "targetMeanPrice": 114.075,
+      "target_delta": 0.06502660815983571
+    },
+    "JPM": {
+      "analyst_score": 0.6279121791004759,
+      "recommendationMean": 2.28,
+      "targetMeanPrice": 328.08698,
+      "target_delta": 0.09956089550237948
+    },
+    "V": {
+      "analyst_score": 0.7536490965809062,
+      "recommendationMean": 1.6,
+      "targetMeanPrice": 394.43134,
+      "target_delta": 0.218245482904531
+    },
+    "ORCL": {
+      "analyst_score": 0.7997506277706584,
+      "recommendationMean": 1.83721,
+      "targetMeanPrice": 342.72113,
+      "target_delta": 0.6266606388532917
+    },
+    "XOM": {
+      "analyst_score": 0.6311075817808922,
+      "recommendationMean": 2.25926,
+      "targetMeanPrice": 128.72,
+      "target_delta": 0.09998290890446081
+    },
+    "JNJ": {
+      "analyst_score": 0.6237877086718866,
+      "recommendationMean": 2.16,
+      "targetMeanPrice": 200.82375,
+      "target_delta": -0.01106145664056731
+    },
+    "MA": {
+      "analyst_score": 0.7525783748958097,
+      "recommendationMean": 1.64103,
+      "targetMeanPrice": 656.50555,
+      "target_delta": 0.24366437447904823
+    },
+    "NFLX": {
+      "analyst_score": 0.7293457474685341,
+      "recommendationMean": 1.83673,
+      "targetMeanPrice": 134.65277,
+      "target_delta": 0.2742762373426706
+    },
+    "ABBV": {
+      "analyst_score": 0.6722937665068642,
+      "recommendationMean": 1.93333,
+      "targetMeanPrice": 243.55345,
+      "target_delta": 0.061466332534321245
+    },
+    "ASML": {
+      "analyst_score": 0.6967481315338824,
+      "recommendationMean": 1.73684,
+      "targetMeanPrice": 1016.72107,
+      "target_delta": 0.036370657669412144
+    },
+    "COST": {
+      "analyst_score": 0.6864221697321138,
+      "recommendationMean": 2.0,
+      "targetMeanPrice": 1055.9678,
+      "target_delta": 0.18211084866056929
+    },
+    "BAC": {
+      "analyst_score": 0.7409640392156862,
+      "recommendationMean": 1.6,
+      "targetMeanPrice": 58.89583,
+      "target_delta": 0.1548201960784313
+    },
+    "PLTR": {
+      "analyst_score": 0.543413143279078,
+      "recommendationMean": 2.96,
+      "targetMeanPrice": 184.87955,
+      "target_delta": 0.18706571639538982
+    },
+    "PG": {
+      "analyst_score": 0.6781469194952425,
+      "recommendationMean": 2.0,
+      "targetMeanPrice": 169.04546,
+      "target_delta": 0.14073459747621292
+    },
+    "BABA": {
+      "analyst_score": 0.7960430589770354,
+      "recommendationMean": 1.40476,
+      "targetMeanPrice": 196.77861,
+      "target_delta": 0.28378529488517734
+    },
+    "AMD": {
+      "analyst_score": 0.7863158671002815,
+      "recommendationMean": 1.54902,
+      "targetMeanPrice": 276.7558,
+      "target_delta": 0.3433443355014077
+    },
+    "HD": {
+      "analyst_score": 0.7159919519224983,
+      "recommendationMean": 1.86486,
+      "targetMeanPrice": 408.36365,
+      "target_delta": 0.22860475961249177
+    },
+    "GE": {
+      "analyst_score": 0.7538828362466451,
+      "recommendationMean": 1.52941,
+      "targetMeanPrice": 339.0,
+      "target_delta": 0.1664716812332255
+    },
+    "KO": {
+      "analyst_score": 0.7347457745400927,
+      "recommendationMean": 1.58333,
+      "targetMeanPrice": 79.13043,
+      "target_delta": 0.11122637270046357
+    },
+    "CVX": {
+      "analyst_score": 0.6577023220344622,
+      "recommendationMean": 2.14815,
+      "targetMeanPrice": 172.8,
+      "target_delta": 0.14962411017231061
+    },
+    "CSCO": {
+      "analyst_score": 0.6690845524920467,
+      "recommendationMean": 2.03846,
+      "targetMeanPrice": 84.81476,
+      "target_delta": 0.12426776246023342
+    },
+    "UNH": {
+      "analyst_score": 0.6982634653656031,
+      "recommendationMean": 2.0,
+      "targetMeanPrice": 386.72,
+      "target_delta": 0.24131732682801568
+    },
+    "SAP": {
+      "analyst_score": 0.590530341113106,
+      "recommendationMean": null,
+      "targetMeanPrice": 339.83334,
+      "target_delta": 0.45265170556552975
+    },
+    "AZN": {
+      "analyst_score": 0.755541347767253,
+      "recommendationMean": 1.36364,
+      "targetMeanPrice": 93.15273,
+      "target_delta": 0.050436738836265205
+    },
+    "IBM": {
+      "analyst_score": 0.5660644283746556,
+      "recommendationMean": 2.55,
+      "targetMeanPrice": 288.31555,
+      "target_delta": -0.007177858126721777
+    },
+    "WFC": {
+      "analyst_score": 0.6712738883495145,
+      "recommendationMean": 2.03846,
+      "targetMeanPrice": 93.54167,
+      "target_delta": 0.1352144417475727
+    },
+    "CAT": {
+      "analyst_score": 0.6384271416787212,
+      "recommendationMean": 2.17857,
+      "targetMeanPrice": 587.6704,
+      "target_delta": 0.07606320839360588
+    },
+    "TM": {
+      "analyst_score": 0.6911946457516339,
+      "recommendationMean": 2.0,
+      "targetMeanPrice": 230.64238,
+      "target_delta": 0.20597322875816995
+    },
+    "MS": {
+      "analyst_score": 0.5899092627599244,
+      "recommendationMean": 2.48,
+      "targetMeanPrice": 168.15,
+      "target_delta": 0.05954631379962204
+    },
+    "GS": {
+      "analyst_score": 0.5794515445263022,
+      "recommendationMean": 2.52,
+      "targetMeanPrice": 802.5263,
+      "target_delta": 0.03725772263151085
+    },
+    "PM": {
+      "analyst_score": 0.7271311824606489,
+      "recommendationMean": 1.72222,
+      "targetMeanPrice": 183.25,
+      "target_delta": 0.17732091230324443
+    },
+    "NVS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AXP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MRK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TMUS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "HSBC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RTX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MU": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MCD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ABT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TMO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NVO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CRM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SHEL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PEP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ISRG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "LIN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SHOP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DIS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AMGN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "T": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "INTU": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "APP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NEE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AMAT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "LRCX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "HDB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "C": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "UBER": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MUFG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "VZ": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SONY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "QCOM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NOW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TJX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BLK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SCHW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "INTC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PDD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "APH": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DHR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "GILD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SAN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "GEV": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ANET": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ACN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SPGI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BKNG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "UL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "KLAC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BSX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ARM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TXN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PFE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TTE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SYK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BA": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "WELL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BHP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PGR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "UNP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ADBE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PANW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "COF": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "LOW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ETN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MDT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CRWD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SPOT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SNY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "UBS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "HON": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RIO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BBVA": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BTI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BUD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PLD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "IBN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ADI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "HCA": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SMFG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "LMT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "COP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CEG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "VRTX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ENB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MCK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PH": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "KKR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ADP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CME": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SCCO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CMCSA": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CVS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MELI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "HOOD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DUK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SBUX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BMY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "GSK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "GD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NKE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NEM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MMC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MMM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "WM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ICE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BMO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MCO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AMT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ORLY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NTES": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SNOW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BNS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CDNS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PBR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PBR-A": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MFG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NOC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BAM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DASH": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SHW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AEM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "HWM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DELL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "UPS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MAR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "REGN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ITUB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TDG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AON": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NU": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ECL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NGG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "EQIX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CTAS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "APO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CRH": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ING": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "USB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RELX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BCS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PNC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "WMB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MDLZ": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "INFY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SNPS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CNQ": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MNST": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "COR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ITW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ELV": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "EMR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RACE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "JCI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "EPD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RCL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AMX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CVNA": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SPG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ABNB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RSG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "LYG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NET": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "GLW": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MRVL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AEP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "RBLX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "COIN": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CMI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TRV": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PWR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AZO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "GM": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AJG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TEL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NSC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CSX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "FDX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "HLT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MSI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ADSK": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "VRT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "B": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "NWG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "KMI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "EQNR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SRE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ALNY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "VST": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TRI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "FTNT": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "AFL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "WDAY": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "EOG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MFC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ET": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "E": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "FCX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TFC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "CNI": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ARGX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "WBD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "TRP": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MPC": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DDOG": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "APD": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ALL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "DLR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "IDXX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MPLX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PYPL": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "BDX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SU": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PSX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "LHX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "SLB": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "STX": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ROST": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "VLO": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "D": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "O": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "VALE": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "PCAR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "ZTS": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "MSTR": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    },
+    "EA": {
+      "analyst_score": 0.5,
+      "recommendationMean": null,
+      "targetMeanPrice": null,
+      "target_delta": null
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "last_updated": "2025-11-21",
+  "moat_scores": {
+    "AAPL": 0.8650000000000001,
+    "MSFT": 0.8700000000000001
+  },
+  "quality_scores": {
+    "AAPL": 0.75,
+    "MSFT": 0.75
+  },
+  "predicted_performance": {
+    "AAPL": {
+      "cagr_1y": 15.0,
+      "cagr_2y": 14.0,
+      "cagr_5y": 13.0,
+      "cagr_10y": 12.0
+    },
+    "MSFT": {
+      "cagr_1y": 15.0,
+      "cagr_2y": 14.0,
+      "cagr_5y": 13.0,
+      "cagr_10y": 12.0
+    }
+  }
+}
