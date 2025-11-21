@@ -12,7 +12,7 @@ try:
 except:
     ROOT_DIR = Path.cwd()
 
-CACHE_FILE = ROOT_DIR / "data/dataroma_cache.json"
+CACHE_FILE = ROOT_DIR / "data/community_data/dataroma_cache.json"
 
 
 def get_superinvestor_data(universe: Optional[List[str]] = None) -> Dict[str, float]:

@@ -18,7 +18,7 @@ MIN_MARKET_CAP = 30_000_000_000
 PORTFOLIO_SIZE = 20
 
 def load_universe():
-    csv_path = ROOT_DIR / "data/tickers_over_50B_full.csv"
+    csv_path = ROOT_DIR / "data/tickers/tickers_over_50B_full.csv"
     
     if csv_path.exists():
         try:
@@ -38,8 +38,8 @@ def gather(universe):
     print("Lade Fundamentaldaten + erweiterte Signale...")
 
     # Community + KI-Moat laden
-    community_path = ROOT_DIR / "data/community_signals.json"
-    ki_path = ROOT_DIR / "data/ai_moat.json"
+    community_path = ROOT_DIR / "data/community_data/community_signals.json"
+    ki_path = ROOT_DIR / "data/community_data/ai_moat.json"
     community = json.load(open(community_path)) if community_path.exists() else {}
     ki_data = json.load(open(ki_path)) if ki_path.exists() else {"ki_moat_score": {}}
 

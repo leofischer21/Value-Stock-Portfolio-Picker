@@ -118,7 +118,7 @@ def gather(universe):
     # Root-Verzeichnis bestimmen (für Scripts in scripts/)
     ROOT_DIR = Path(__file__).parent.parent
 
-    signals = json.load(open(ROOT_DIR / "data/community_signals.json"))
+    signals = json.load(open(ROOT_DIR / "data/community_data/community_signals.json"))
 
     superinvestor = signals["superinvestor_score"]
     reddit = signals["reddit_score"]

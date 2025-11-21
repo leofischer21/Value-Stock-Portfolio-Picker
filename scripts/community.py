@@ -19,7 +19,7 @@ def _load_json(path: Path):
 
 def load_community_signals(path: Path = None) -> Tuple[Dict[str, float], Dict[str, float], Dict[str, float]]:
     if path is None:
-        path = ROOT_DIR / "data/community_signals.json"
+        path = ROOT_DIR / "data/community_data/community_signals.json"
     """Load community signals from JSON.
 
     Supports two formats:
@@ -55,7 +55,7 @@ def load_community_signals(path: Path = None) -> Tuple[Dict[str, float], Dict[st
 
 def load_ai_moat(path: Path = None) -> Dict[str, float]:
     if path is None:
-        path = ROOT_DIR / "data/ai_moat.json"
+        path = ROOT_DIR / "data/community_data/ai_moat.json"
     data = _load_json(path)
     if not data:
         return {}

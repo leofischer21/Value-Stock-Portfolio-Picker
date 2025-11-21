@@ -62,7 +62,11 @@ def scrape_stockanalysis_pages(max_pages=None):
         if r.status_code != 200:
             print("Warning: page", p, "status", r.status_code)
             continue
-        soup = BeautifulSoup(r.text, "lxml")
+        # Try lxml first, fallback to html.parser
+        try:
+            soup = BeautifulSoup(r.text, "lxml")
+        except Exception:
+            soup = BeautifulSoup(r.text, "html.parser")
         # rows in table
         rows = soup.select("table tbody tr")
         for tr in rows:
@@ -155,10 +159,10 @@ def main(output_txt="tickers_over_50B.txt", output_csv=None):
     
     # Determine output paths
     month = datetime.now().strftime("%Y-%m")
-    universe_dir = ROOT_DIR / "data/universe"
+    universe_dir = ROOT_DIR / "data/tickers"
     universe_dir.mkdir(parents=True, exist_ok=True)
     
-    # Write monthly CSV to data/universe/
+    # Write monthly CSV to data/tickers/
     if output_csv is None:
         output_csv = f"{month}.csv"
     csv_path = universe_dir / output_csv

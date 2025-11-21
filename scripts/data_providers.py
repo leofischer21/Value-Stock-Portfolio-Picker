@@ -34,6 +34,9 @@ def _normalize_info(info: dict) -> dict:
     out['trailingPE'] = _safe_float(info.get('trailingPE'))
     out['forwardPE'] = _safe_float(info.get('forwardPE'))
     out['beta'] = _safe_float(info.get('beta'))
+    # Sector and industry (string fields)
+    out['sector'] = info.get('sector') or info.get('sectorName') or None
+    out['industry'] = info.get('industry') or info.get('industryName') or None
     # returnOnEquity sometimes in percent (e.g. 15) or fraction (0.15)
     roe = info.get('returnOnEquity')
     if roe is None:
@@ -59,6 +62,45 @@ def _normalize_info(info: dict) -> dict:
     forward_eps = _safe_float(info.get('forwardEps') or info.get('forwardEps') or info.get('epsForward'))
     out['trailingEps'] = trailing_eps
     out['forwardEps'] = forward_eps
+    
+    # Earnings Growth for PEG Ratio
+    earnings_growth = _safe_float(info.get('earningsGrowth') or info.get('earningsQuarterlyGrowth'))
+    if earnings_growth is None:
+        # Try earningsGrowthQuarterlyYoy
+        earnings_growth = _safe_float(info.get('earningsGrowthQuarterlyYoy'))
+    out['earningsGrowth'] = earnings_growth
+    
+    # Calculate PEG Ratio (Price/Earnings to Growth)
+    if out['trailingPE'] is not None and earnings_growth is not None and earnings_growth > 0:
+        out['pegRatio'] = out['trailingPE'] / (earnings_growth * 100)  # earnings_growth is often in decimal (0.15 = 15%)
+    elif out['trailingPE'] is not None and earnings_growth is not None and earnings_growth > 1:
+        # If earnings_growth is already in percent (e.g., 15 instead of 0.15)
+        out['pegRatio'] = out['trailingPE'] / earnings_growth
+    else:
+        out['pegRatio'] = None
+    
+    # Free Cash Flow for P/FCF
+    free_cashflow = _safe_float(info.get('freeCashflow') or info.get('freeCashFlow'))
+    out['freeCashflow'] = free_cashflow
+    
+    # Calculate P/FCF (Price to Free Cash Flow)
+    if out['currentPrice'] is not None and free_cashflow is not None:
+        shares_outstanding = _safe_float(info.get('sharesOutstanding'))
+        if shares_outstanding and shares_outstanding > 0:
+            # P/FCF = Price per share / (Free Cash Flow per share)
+            fcf_per_share = free_cashflow / shares_outstanding
+            if fcf_per_share > 0:
+                out['priceToFreeCashFlow'] = out['currentPrice'] / fcf_per_share
+            else:
+                out['priceToFreeCashFlow'] = None
+        else:
+            # Fallback: use marketCap if available
+            if out['marketCap'] is not None and free_cashflow > 0:
+                out['priceToFreeCashFlow'] = out['marketCap'] / free_cashflow
+            else:
+                out['priceToFreeCashFlow'] = None
+    else:
+        out['priceToFreeCashFlow'] = None
 
     # Fallback computation: if trailingPE missing but we have price & trailing_eps
     if out['trailingPE'] is None and out['currentPrice'] is not None and trailing_eps:

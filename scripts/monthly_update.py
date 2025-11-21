@@ -3,14 +3,16 @@
 Monthly Update Orchestrator
 Führt monatlich alle Updates durch:
 1. Generiert neue Ticker-Liste (>50B MarketCap, US-Ticker)
-2. Lädt Reddit-Sentiment
-3. Lädt X-Sentiment
-4. Lädt Superinvestor-Daten
-5. Speichert alles in monatlichen Dateien
+2. Lädt Finanzdaten (Yahoo Finance)
+3. Lädt Reddit-Sentiment
+4. Lädt X-Sentiment
+5. Lädt Superinvestor-Daten
+6. Speichert alles in monatlichen Dateien
 """
 from datetime import datetime
 import json
 import logging
+import pandas as pd
 from pathlib import Path
 from typing import List, Dict
 
@@ -54,6 +56,72 @@ def update_universe() -> List[str]:
         raise
 
 
+def update_financials(tickers: List[str], month: str = None) -> None:
+    """
+    Lädt Finanzdaten für alle Ticker von Yahoo Finance.
+    Speichert in data/financials/YYYY-MM.csv und latest.csv
+    """
+    try:
+        logger.info(f"Loading financial data for {len(tickers)} tickers...")
+        
+        # Import data_providers
+        from data_providers import fetch_fundamentals
+        
+        # Fetch fundamentals in parallel
+        logger.info("Fetching fundamentals from Yahoo Finance...")
+        info_map = fetch_fundamentals(tickers, max_workers=8)
+        
+        if not info_map:
+            raise ValueError("No financial data fetched!")
+        
+        # Convert to DataFrame
+        rows = []
+        for ticker, info in info_map.items():
+            if info:  # Only add if we have data
+                row = {
+                    'ticker': ticker,
+                    'marketCap': info.get('marketCap'),
+                    'sector': info.get('sector', 'Unknown'),
+                    'trailingPE': info.get('trailingPE'),
+                    'forwardPE': info.get('forwardPE'),
+                    'pegRatio': info.get('pegRatio'),
+                    'priceToFreeCashFlow': info.get('priceToFreeCashFlow'),
+                    'beta': info.get('beta'),
+                    'returnOnEquity': info.get('returnOnEquity'),
+                    'debtToEquity': info.get('debtToEquity'),
+                }
+                # Only add if we have at least some key data
+                if row['marketCap'] is not None or row['trailingPE'] is not None:
+                    rows.append(row)
+        
+        if not rows:
+            raise ValueError("No valid financial data rows created!")
+        
+        financial_df = pd.DataFrame(rows)
+        
+        # Determine month
+        if month is None:
+            month = datetime.now().strftime("%Y-%m")
+        
+        # Save to data/financials/
+        financials_dir = ROOT_DIR / "data/financials"
+        financials_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save monthly file
+        monthly_path = financials_dir / f"{month}.csv"
+        financial_df.to_csv(monthly_path, index=False)
+        logger.info(f"Saved financials to {monthly_path} ({len(financial_df)} tickers)")
+        
+        # Save latest file
+        latest_path = financials_dir / "latest.csv"
+        financial_df.to_csv(latest_path, index=False)
+        logger.info(f"Saved financials to {latest_path}")
+        
+    except Exception as e:
+        logger.error(f"Failed to update financials: {e}")
+        raise
+
+
 def update_sentiments(tickers: List[str]) -> Dict:
     """
     Lädt alle Sentiment-Daten für die gegebenen Ticker.
@@ -62,10 +130,10 @@ def update_sentiments(tickers: List[str]) -> Dict:
     try:
         logger.info(f"Loading sentiment data for {len(tickers)} tickers...")
         
-        # Import modules (moved to scripts/)
-        from scripts.reddit import get_reddit_mentions
-        from scripts.twitter import get_x_sentiment_score
-        from scripts.dataroma import get_superinvestor_data
+        # Import modules (all in scripts/)
+        from reddit import get_reddit_mentions
+        from twitter import get_x_sentiment_score
+        from dataroma import get_superinvestor_data
         
         # Load Reddit sentiment
         logger.info("Loading Reddit sentiment...")
@@ -144,16 +212,20 @@ def main():
         # Step 1: Update universe
         tickers = update_universe()
         
-        # Step 2: Update sentiments
+        # Step 2: Update financials
+        month = datetime.now().strftime("%Y-%m")
+        update_financials(tickers, month)
+        
+        # Step 3: Update sentiments
         scores = update_sentiments(tickers)
         
-        # Step 3: Save scores
-        month = datetime.now().strftime("%Y-%m")
+        # Step 4: Save scores
         save_scores(scores, month)
         
         logger.info("=" * 60)
         logger.info("Monthly update completed successfully!")
         logger.info(f"Universe: {len(tickers)} tickers")
+        logger.info(f"Financials: saved to data/financials/{month}.csv")
         logger.info(f"Scores: {len(scores['superinvestor_score'])} superinvestor, "
                    f"{len(scores['reddit_score'])} reddit, "
                    f"{len(scores['x_score'])} x")
