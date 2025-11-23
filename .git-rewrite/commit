@@ -1,0 +1,6 @@
+tree c7cc87052e559ed009df99d207f285c299cf4b43
+parent 5cdd99bd876adaf42e742f75e624aa633b0b3bc0
+author Leo Fischer <schneeloewe21@gmail.com> 1763895649 +0100
+committer Leo Fischer <schneeloewe21@gmail.com> 1763895649 +0100
+
+fix: remove .env from repository and update .gitignore

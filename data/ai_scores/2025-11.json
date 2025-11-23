@@ -1,0 +1,2313 @@
+{
+  "last_updated": "2025-11-22",
+  "moat_scores": {
+    "NVDA": 0.8,
+    "AAPL": 0.8,
+    "GOOGL": 0.9,
+    "MSFT": 0.8,
+    "AMZN": 0.8,
+    "AVGO": 0.8,
+    "META": 0.8,
+    "TSLA": 0.8,
+    "TSM": 0.8,
+    "BRK-B": 0.8,
+    "LLY": 0.8,
+    "WMT": 0.7,
+    "JPM": 0.7,
+    "V": 0.8,
+    "ORCL": 0.7956730000000001,
+    "XOM": 0.6,
+    "JNJ": 0.8,
+    "MA": 0.8,
+    "NFLX": 0.8,
+    "ABBV": 0.8,
+    "COST": 0.8,
+    "BAC": 0.6,
+    "ASML": 0.8,
+    "PLTR": 0.2,
+    "PG": 0.8,
+    "HD": 0.2,
+    "BABA": 0.8,
+    "AMD": 0.4,
+    "KO": 0.8,
+    "GE": 0.4,
+    "CVX": 0.6,
+    "CSCO": 0.7,
+    "UNH": 0.8,
+    "AZN": 0.7,
+    "IBM": 0.7,
+    "SAP": 0.7428586,
+    "WFC": 0.4,
+    "CAT": 0.7,
+    "TM": 0.2,
+    "MS": 0.8,
+    "NVS": 0.8,
+    "AXP": 0.8,
+    "GS": 0.8,
+    "MRK": 0.7,
+    "PM": 0.7,
+    "TMUS": 0.6,
+    "HSBC": 0.6,
+    "MU": 0.6,
+    "RTX": 0.7,
+    "ABT": 0.7,
+    "TMO": 0.7,
+    "MCD": 0.8,
+    "CRM": 0.8,
+    "NVO": 0.8,
+    "RY": 0.6,
+    "SHEL": 0.6,
+    "PEP": 0.8,
+    "ISRG": 0.8,
+    "LIN": 0.4,
+    "SHOP": 0.8,
+    "DIS": 0.7,
+    "INTU": 0.7,
+    "T": 0.2,
+    "AMGN": 0.8,
+    "LRCX": 0.8,
+    "AMAT": 0.7,
+    "C": 0.2,
+    "APP": 0.2,
+    "BX": 0.6,
+    "QCOM": 0.7,
+    "UBER": 0.6,
+    "NEE": 0.8,
+    "VZ": 0.6,
+    "MUFG": 0.4,
+    "SONY": 0.7,
+    "HDB": 0.4,
+    "NOW": 0.6,
+    "TJX": 0.7,
+    "BLK": 0.8,
+    "INTC": 0.2,
+    "APH": 0.6,
+    "SCHW": 0.6,
+    "PDD": 0.6,
+    "DHR": 0.7,
+    "GILD": 0.8,
+    "ACN": 0.7,
+    "BKNG": 0.8,
+    "GEV": 0.2,
+    "SPGI": 0.7,
+    "UL": 0.7,
+    "SAN": 0.2,
+    "ANET": 0.8,
+    "TXN": 0.7,
+    "KLAC": 0.7,
+    "BSX": 0.6,
+    "PFE": 0.6,
+    "SYK": 0.7,
+    "TD": 0.6,
+    "ARM": 0.8,
+    "TTE": 0.2,
+    "WELL": 0.2,
+    "BA": 0.0,
+    "ADBE": 0.8,
+    "UNP": 0.7,
+    "PGR": 0.6,
+    "COF": 0.2,
+    "BHP": 0.6,
+    "DE": 0.4,
+    "LOW": 0.4,
+    "MDT": 0.6,
+    "ETN": 0.6,
+    "PANW": 0.7,
+    "CRWD": 0.8,
+    "BUD": 0.6,
+    "SNY": 0.6,
+    "HON": 0.6,
+    "BTI": 0.4,
+    "SPOT": 0.6,
+    "PLD": 0.4,
+    "RIO": 0.6,
+    "CB": 0.6,
+    "BBVA": 0.4,
+    "UBS": 0.4,
+    "ADI": 0.7,
+    "HCA": 0.6,
+    "IBN": 0.4,
+    "SMFG": 0.4,
+    "VRTX": 0.8,
+    "COP": 0.6,
+    "MCK": 0.6,
+    "LMT": 0.8,
+    "PH": 0.4,
+    "KKR": 0.6,
+    "CEG": 0.6,
+    "ENB": 0.4,
+    "ADP": 0.8,
+    "SCCO": 0.6,
+    "BN": 0.2,
+    "CMCSA": 0.6,
+    "CVS": 0.4,
+    "MELI": 0.8,
+    "CME": 0.8,
+    "SO": 0.8,
+    "MO": 0.6,
+    "SBUX": 0.8,
+    "HOOD": 0.2,
+    "DUK": 0.7,
+    "BMY": 0.7,
+    "GSK": 0.7,
+    "NKE": 0.7,
+    "GD": 0.6,
+    "NEM": 0.4,
+    "BP": 0.2,
+    "TT": 0.4,
+    "MMM": 0.7,
+    "MMC": 0.2,
+    "ICE": 0.8,
+    "WM": 0.8,
+    "BMO": 0.6,
+    "MCO": 0.8,
+    "ORLY": 0.6,
+    "AMT": 0.6,
+    "NTES": 0.7,
+    "SHW": 0.8,
+    "BNS": 0.4,
+    "DELL": 0.4,
+    "MFG": 0.2,
+    "CDNS": 0.8,
+    "DASH": 0.2,
+    "BAM": 0.6,
+    "NOC": 0.8,
+    "AEM": 0.4,
+    "PBR": 0.2,
+    "PBR-A": 0.2,
+    "UPS": 0.7,
+    "MAR": 0.6,
+    "HWM": 0.2,
+    "SNOW": 0.2,
+    "CM": 0.6,
+    "SE": 0.2,
+    "REGN": 0.8,
+    "NU": 0.4,
+    "TDG": 0.4,
+    "ECL": 0.2,
+    "APO": 0.4,
+    "CTAS": 0.7,
+    "ITUB": 0.6,
+    "AON": 0.6,
+    "CI": 0.4,
+    "USB": 0.6,
+    "BK": 0.2,
+    "EQIX": 0.8,
+    "NGG": 0.6,
+    "RELX": 0.7,
+    "CRH": 0.4,
+    "MDLZ": 0.7,
+    "PNC": 0.6,
+    "WMB": 0.2,
+    "SNPS": 0.8,
+    "ING": 0.4,
+    "EMR": 0.4,
+    "RCL": 0.2,
+    "ITW": 0.7,
+    "ELV": 0.2,
+    "INFY": 0.6,
+    "BCS": 0.2,
+    "COR": 0.2,
+    "MNST": 0.7,
+    "EPD": 0.6,
+    "CNQ": 0.4,
+    "JCI": 0.4,
+    "ABNB": 0.8,
+    "SPG": 0.8,
+    "RACE": 0.6,
+    "AMX": 0.2,
+    "GLW": 0.4,
+    "CVNA": 0.2,
+    "RSG": 0.4,
+    "LYG": 0.2,
+    "MRVL": 0.2,
+    "GM": 0.4,
+    "NET": 0.0,
+    "CL": 0.4,
+    "CMI": 0.6,
+    "AZO": 0.6,
+    "COIN": 0.7,
+    "TRV": 0.6,
+    "AJG": 0.4,
+    "AEP": 0.7,
+    "DB": 0.2,
+    "TEL": 0.6,
+    "NSC": 0.4,
+    "PWR": 0.2,
+    "CSX": 0.7,
+    "HLT": 0.6,
+    "FDX": 0.6,
+    "CP": 0.6,
+    "RBLX": 0.2,
+    "ADSK": 0.8,
+    "B": 0.4,
+    "MSI": 0.2,
+    "VRT": 0.2,
+    "NWG": 0.2,
+    "SRE": 0.6,
+    "WDAY": 0.7,
+    "TRI": 0.6,
+    "KMI": 0.4,
+    "FTNT": 0.7,
+    "TFC": 0.2,
+    "AFL": 0.6,
+    "MFC": 0.4,
+    "EOG": 0.6,
+    "IDXX": 0.8,
+    "ALNY": 0.8,
+    "EQNR": 0.4,
+    "WBD": 0.2,
+    "MPC": 0.2,
+    "APD": 0.0,
+    "FCX": 0.4,
+    "CNI": 0.4,
+    "VST": 0.2,
+    "ET": 0.4,
+    "PYPL": 0.8,
+    "ROST": 0.4,
+    "ARGX": 0.4,
+    "E": 0.2,
+    "ALL": 0.2,
+    "TRP": 0.4,
+    "DDOG": 0.8,
+    "BDX": 0.7,
+    "MPLX": 0.4,
+    "DLR": 0.2,
+    "PCAR": 0.6,
+    "SLB": 0.6,
+    "PSX": 0.2,
+    "ZTS": 0.8,
+    "SU": 0.4,
+    "VLO": 0.4,
+    "D": 0.7,
+    "O": 0.2,
+    "LHX": 0.6,
+    "STX": 0.2,
+    "DEO": 0.8,
+    "VALE": 0.6,
+    "F": 0.2,
+    "URI": 0.6,
+    "NDAQ": 0.7,
+    "EA": 0.6
+  },
+  "quality_scores": {
+    "NVDA": 0.6,
+    "AAPL": 0.6,
+    "GOOGL": 0.7999999999999999,
+    "MSFT": 0.7999999999999999,
+    "AMZN": 0.7,
+    "AVGO": 0.7,
+    "META": 0.7999999999999999,
+    "TSLA": 0.5,
+    "TSM": 0.8,
+    "BRK-B": 0.7,
+    "LLY": 0.7999999999999999,
+    "WMT": 0.7,
+    "JPM": 0.6,
+    "V": 0.7999999999999999,
+    "ORCL": 0.7999999999999999,
+    "XOM": 0.65,
+    "JNJ": 0.7999999999999999,
+    "MA": 0.6,
+    "NFLX": 0.7,
+    "ABBV": 0.6,
+    "COST": 0.7,
+    "BAC": 0.6,
+    "ASML": 0.8,
+    "PLTR": 0.6,
+    "PG": 0.7,
+    "HD": 0.2,
+    "BABA": 0.65,
+    "AMD": 0.7,
+    "KO": 0.6,
+    "GE": 0.75,
+    "CVX": 0.55,
+    "CSCO": 0.62,
+    "UNH": 0.6,
+    "AZN": 0.7999999999999999,
+    "IBM": 0.4,
+    "SAP": 0.75,
+    "WFC": 0.6,
+    "CAT": 0.4,
+    "TM": 0.2,
+    "MS": 0.75,
+    "NVS": 0.7,
+    "AXP": 0.6,
+    "GS": 0.7,
+    "MRK": 0.7,
+    "PM": 0.4,
+    "TMUS": 0.6,
+    "HSBC": 0.6,
+    "MU": 0.75,
+    "RTX": 0.6,
+    "ABT": 0.7,
+    "TMO": 0.7,
+    "MCD": 0.4,
+    "CRM": 0.7,
+    "NVO": 0.6,
+    "RY": 0.6,
+    "SHEL": 0.5,
+    "PEP": 0.4,
+    "ISRG": 0.7,
+    "LIN": 0.4,
+    "SHOP": 0.6,
+    "DIS": 0.6,
+    "INTU": 0.7,
+    "T": 0.75,
+    "AMGN": 0.7999999999999999,
+    "LRCX": 0.7,
+    "AMAT": 0.7999999999999999,
+    "C": 0.4,
+    "APP": 0.6,
+    "BX": 0.6,
+    "QCOM": 0.6,
+    "UBER": 0.7999999999999999,
+    "NEE": 0.6,
+    "VZ": 0.4,
+    "MUFG": 0.4,
+    "SONY": 0.7,
+    "HDB": 0.6,
+    "NOW": 0.75,
+    "TJX": 0.6,
+    "BLK": 0.7,
+    "INTC": 0.5,
+    "APH": 0.7999999999999999,
+    "SCHW": 0.6,
+    "PDD": 0.7,
+    "DHR": 0.7,
+    "GILD": 0.6,
+    "ACN": 0.62,
+    "BKNG": 0.4,
+    "GEV": 0.2,
+    "SPGI": 0.7,
+    "UL": 0.4,
+    "SAN": 0.6,
+    "ANET": 0.7,
+    "TXN": 0.7999999999999999,
+    "KLAC": 0.7,
+    "BSX": 0.7,
+    "PFE": 0.6,
+    "SYK": 0.7,
+    "TD": 0.6,
+    "ARM": 0.7,
+    "TTE": 0.65,
+    "WELL": 0.4,
+    "BA": 0.0,
+    "ADBE": 0.8,
+    "UNP": 0.6,
+    "PGR": 0.6,
+    "COF": 0.4,
+    "BHP": 0.7999999999999999,
+    "DE": 0.2,
+    "LOW": 0.4,
+    "MDT": 0.4,
+    "ETN": 0.4,
+    "PANW": 0.7,
+    "CRWD": 0.2,
+    "BUD": 0.3,
+    "SNY": 0.6,
+    "HON": 0.4,
+    "BTI": 0.4,
+    "SPOT": 0.6,
+    "PLD": 0.6,
+    "RIO": 0.6,
+    "CB": 0.65,
+    "BBVA": 0.6,
+    "UBS": 0.5,
+    "ADI": 0.7,
+    "HCA": 0.4,
+    "IBN": 0.6,
+    "SMFG": 0.4,
+    "VRTX": 0.7999999999999999,
+    "COP": 0.6,
+    "MCK": 0.2,
+    "LMT": 0.4,
+    "PH": 0.4,
+    "KKR": 0.6,
+    "CEG": 0.4,
+    "ENB": 0.55,
+    "ADP": 0.7999999999999999,
+    "SCCO": 0.6,
+    "BN": 0.55,
+    "CMCSA": 0.6,
+    "CVS": 0.5,
+    "MELI": 0.75,
+    "CME": 0.7,
+    "SO": 0.2,
+    "MO": 0.6,
+    "SBUX": 0.3,
+    "HOOD": 0.7999999999999999,
+    "DUK": 0.6,
+    "BMY": 0.4,
+    "GSK": 0.7999999999999999,
+    "NKE": 0.6,
+    "GD": 0.6,
+    "NEM": 0.4,
+    "BP": 0.2,
+    "TT": 0.75,
+    "MMM": 0.2,
+    "MMC": 0.7999999999999999,
+    "ICE": 0.7,
+    "WM": 0.4,
+    "BMO": 0.6,
+    "MCO": 0.2,
+    "ORLY": 0.6,
+    "AMT": 0.7999999999999999,
+    "NTES": 0.7999999999999999,
+    "SHW": 0.7999999999999999,
+    "BNS": 0.6,
+    "DELL": 0.3,
+    "MFG": 0.4,
+    "CDNS": 0.7,
+    "DASH": 0.4,
+    "BAM": 0.7999999999999999,
+    "NOC": 0.2,
+    "AEM": 0.7,
+    "PBR": 0.4,
+    "PBR-A": 0.35,
+    "UPS": 0.4,
+    "MAR": 0.6,
+    "HWM": 0.4,
+    "SNOW": 0.5,
+    "CM": 0.65,
+    "SE": 0.4,
+    "REGN": 0.7,
+    "NU": 0.6,
+    "TDG": 0.4,
+    "ECL": 0.2,
+    "APO": 0.4,
+    "CTAS": 0.6,
+    "ITUB": 0.6,
+    "AON": 0.7999999999999999,
+    "CI": 0.65,
+    "USB": 0.6,
+    "BK": 0.4,
+    "EQIX": 0.6,
+    "NGG": 0.4,
+    "RELX": 0.6,
+    "CRH": 0.65,
+    "MDLZ": 0.6,
+    "PNC": 0.6,
+    "WMB": 0.75,
+    "SNPS": 0.7,
+    "ING": 0.6,
+    "EMR": 0.4,
+    "RCL": 0.7999999999999999,
+    "ITW": 0.7,
+    "ELV": 0.6,
+    "INFY": 0.75,
+    "BCS": 0.55,
+    "COR": 0.2,
+    "MNST": 0.7,
+    "EPD": 0.4,
+    "CNQ": 0.6,
+    "JCI": 0.65,
+    "ABNB": 0.7,
+    "SPG": 0.7999999999999999,
+    "RACE": 0.6,
+    "AMX": 0.75,
+    "GLW": 0.65,
+    "CVNA": 0.7,
+    "RSG": 0.2,
+    "LYG": 0.4,
+    "MRVL": 0.2,
+    "GM": 0.3,
+    "NET": 0.0,
+    "CL": 0.2,
+    "CMI": 0.4,
+    "AZO": 0.4,
+    "COIN": 0.7999999999999999,
+    "TRV": 0.6,
+    "AJG": 0.6,
+    "AEP": 0.7,
+    "DB": 0.4,
+    "TEL": 0.65,
+    "NSC": 0.4,
+    "PWR": 0.3,
+    "CSX": 0.4,
+    "HLT": 0.4,
+    "FDX": 0.4,
+    "CP": 0.6,
+    "RBLX": 0.0,
+    "ADSK": 0.7,
+    "B": 0.6,
+    "MSI": 0.6,
+    "VRT": 0.2,
+    "NWG": 0.6,
+    "SRE": 0.4,
+    "WDAY": 0.6,
+    "TRI": 0.6,
+    "KMI": 0.6,
+    "FTNT": 0.7,
+    "TFC": 0.4,
+    "AFL": 0.75,
+    "MFC": 0.7,
+    "EOG": 0.75,
+    "IDXX": 0.7,
+    "ALNY": 0.2,
+    "EQNR": 0.65,
+    "WBD": 0.55,
+    "MPC": 0.65,
+    "APD": 0.0,
+    "FCX": 0.65,
+    "CNI": 0.4,
+    "VST": 0.2,
+    "ET": 0.6,
+    "PYPL": 0.7999999999999999,
+    "ROST": 0.6,
+    "ARGX": 0.65,
+    "E": 0.5,
+    "ALL": 0.6,
+    "TRP": 0.2,
+    "DDOG": 0.4,
+    "BDX": 0.55,
+    "MPLX": 0.7999999999999999,
+    "DLR": 0.4,
+    "PCAR": 0.4,
+    "SLB": 0.7000000000000001,
+    "PSX": 0.2,
+    "ZTS": 0.6,
+    "SU": 0.6,
+    "VLO": 0.4,
+    "D": 0.6,
+    "O": 0.4,
+    "LHX": 0.6,
+    "STX": 0.4,
+    "DEO": 0.4,
+    "VALE": 0.7,
+    "F": 0.6,
+    "URI": 0.2,
+    "NDAQ": 0.7,
+    "EA": 0.7
+  },
+  "predicted_performance": {
+    "NVDA": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 18.0
+    },
+    "AAPL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "GOOGL": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 14.5,
+      "cagr_10y": 16.2
+    },
+    "MSFT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "AMZN": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 18.3
+    },
+    "AVGO": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "META": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "TSLA": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "TSM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "BRK-B": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "LLY": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "WMT": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "JPM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "V": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ORCL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "XOM": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "JNJ": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "MA": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "NFLX": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 18.2
+    },
+    "ABBV": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "COST": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "BAC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "ASML": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "PLTR": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.0,
+      "cagr_10y": 12.5
+    },
+    "PG": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.8
+    },
+    "HD": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "BABA": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "AMD": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "KO": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "GE": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "CVX": {
+      "cagr_1y": 7.5,
+      "cagr_2y": 8.2,
+      "cagr_5y": 9.5,
+      "cagr_10y": 10.2
+    },
+    "CSCO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "UNH": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "AZN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "IBM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "SAP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "WFC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "CAT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "TM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.1
+    },
+    "MS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "NVS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "AXP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "GS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "MRK": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "PM": {
+      "cagr_1y": 6.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.1,
+      "cagr_10y": 9.0
+    },
+    "TMUS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "HSBC": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "MU": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "RTX": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "ABT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "TMO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "MCD": {
+      "cagr_1y": 10.5,
+      "cagr_2y": 9.5,
+      "cagr_5y": 8.5,
+      "cagr_10y": 8.0
+    },
+    "CRM": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.0,
+      "cagr_10y": 12.5
+    },
+    "NVO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 11.5
+    },
+    "RY": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "SHEL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "PEP": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "ISRG": {
+      "cagr_1y": 12.1,
+      "cagr_2y": 14.5,
+      "cagr_5y": 16.2,
+      "cagr_10y": 14.8
+    },
+    "LIN": {
+      "cagr_1y": 17.5,
+      "cagr_2y": 16.5,
+      "cagr_5y": 15.5,
+      "cagr_10y": 15.0
+    },
+    "SHOP": {
+      "cagr_1y": 12.1,
+      "cagr_2y": 15.3,
+      "cagr_5y": 18.2,
+      "cagr_10y": 20.1
+    },
+    "DIS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "INTU": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "T": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 8.1,
+      "cagr_10y": 9.5
+    },
+    "AMGN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "LRCX": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "AMAT": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 12.8
+    },
+    "C": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "APP": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 18.2
+    },
+    "BX": {
+      "cagr_1y": 17.0,
+      "cagr_2y": 16.0,
+      "cagr_5y": 15.0,
+      "cagr_10y": 14.5
+    },
+    "QCOM": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "UBER": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 18.0
+    },
+    "NEE": {
+      "cagr_1y": 6.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.5
+    },
+    "VZ": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "MUFG": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "SONY": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "HDB": {
+      "cagr_1y": 14.0,
+      "cagr_2y": 13.0,
+      "cagr_5y": 12.0,
+      "cagr_10y": 11.5
+    },
+    "NOW": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 18.0
+    },
+    "TJX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "BLK": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "INTC": {
+      "cagr_1y": 5.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.5,
+      "cagr_10y": 9.0
+    },
+    "APH": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.3,
+      "cagr_10y": 18.1
+    },
+    "SCHW": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "PDD": {
+      "cagr_1y": 12.1,
+      "cagr_2y": 15.3,
+      "cagr_5y": 18.5,
+      "cagr_10y": 20.2
+    },
+    "DHR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "GILD": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ACN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "BKNG": {
+      "cagr_1y": 11.0,
+      "cagr_2y": 10.0,
+      "cagr_5y": 9.0,
+      "cagr_10y": 8.5
+    },
+    "GEV": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "SPGI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "UL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "SAN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ANET": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 12.8
+    },
+    "TXN": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 14.5,
+      "cagr_10y": 11.8
+    },
+    "KLAC": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "BSX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "PFE": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "SYK": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "TD": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ARM": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "TTE": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "WELL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "BA": {
+      "cagr_1y": 13.5,
+      "cagr_2y": 12.5,
+      "cagr_5y": 11.5,
+      "cagr_10y": 11.0
+    },
+    "ADBE": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "UNP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "PGR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "COF": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "BHP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "DE": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "LOW": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "MDT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "ETN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "PANW": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "CRWD": {
+      "cagr_1y": 10.0,
+      "cagr_2y": 12.0,
+      "cagr_5y": 15.0,
+      "cagr_10y": 12.0
+    },
+    "BUD": {
+      "cagr_1y": 6.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.5
+    },
+    "SNY": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "HON": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "BTI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "SPOT": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "PLD": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "RIO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "CB": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "BBVA": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "UBS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ADI": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "HCA": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "IBN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "SMFG": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "VRTX": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "COP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "MCK": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "LMT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "PH": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "KKR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "CEG": {
+      "cagr_1y": 9.0,
+      "cagr_2y": 8.0,
+      "cagr_5y": 7.0,
+      "cagr_10y": 6.5
+    },
+    "ENB": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.8
+    },
+    "ADP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "SCCO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "BN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "CMCSA": {
+      "cagr_1y": 22.5,
+      "cagr_2y": 21.5,
+      "cagr_5y": 20.0,
+      "cagr_10y": 18.0
+    },
+    "CVS": {
+      "cagr_1y": 5.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.5,
+      "cagr_10y": 9.0
+    },
+    "MELI": {
+      "cagr_1y": 12.1,
+      "cagr_2y": 15.3,
+      "cagr_5y": 18.2,
+      "cagr_10y": 20.1
+    },
+    "CME": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "SO": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.1,
+      "cagr_5y": 8.5,
+      "cagr_10y": 9.2
+    },
+    "MO": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "SBUX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "HOOD": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "DUK": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 5.2,
+      "cagr_5y": 6.0,
+      "cagr_10y": 6.8
+    },
+    "BMY": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "GSK": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "NKE": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "GD": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "NEM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "BP": {
+      "cagr_1y": 5.2,
+      "cagr_2y": 6.5,
+      "cagr_5y": 8.1,
+      "cagr_10y": 9.5
+    },
+    "TT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "MMM": {
+      "cagr_1y": 6.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.8
+    },
+    "MMC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "ICE": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "WM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "BMO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "MCO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "ORLY": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "AMT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "NTES": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "SHW": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "BNS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "DELL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "MFG": {
+      "cagr_1y": 18.5,
+      "cagr_2y": 17.5,
+      "cagr_5y": 16.5,
+      "cagr_10y": 16.0
+    },
+    "CDNS": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "DASH": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "BAM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "NOC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "AEM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "PBR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "PBR-A": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 8.5,
+      "cagr_10y": 7.8
+    },
+    "UPS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "MAR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "HWM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "SNOW": {
+      "cagr_1y": 0.0,
+      "cagr_2y": 5.0,
+      "cagr_5y": 10.0,
+      "cagr_10y": 12.0
+    },
+    "CM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "SE": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "REGN": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "NU": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "TDG": {
+      "cagr_1y": 11.5,
+      "cagr_2y": 10.5,
+      "cagr_5y": 9.5,
+      "cagr_10y": 9.0
+    },
+    "ECL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "APO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "CTAS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ITUB": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "AON": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "CI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "USB": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "BK": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "EQIX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "NGG": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.5,
+      "cagr_10y": 8.1
+    },
+    "RELX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "CRH": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "MDLZ": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.8
+    },
+    "PNC": {
+      "cagr_1y": 20.0,
+      "cagr_2y": 19.0,
+      "cagr_5y": 18.0,
+      "cagr_10y": 17.5
+    },
+    "WMB": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 8.1,
+      "cagr_10y": 9.5
+    },
+    "SNPS": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "ING": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "EMR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "RCL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ITW": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ELV": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "INFY": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 14.5,
+      "cagr_10y": 16.1
+    },
+    "BCS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "COR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "MNST": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "EPD": {
+      "cagr_1y": 7.5,
+      "cagr_2y": 8.2,
+      "cagr_5y": 9.1,
+      "cagr_10y": 8.5
+    },
+    "CNQ": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "JCI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ABNB": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "SPG": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "RACE": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "AMX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "GLW": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "CVNA": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 12.8
+    },
+    "RSG": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "LYG": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "MRVL": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.0,
+      "cagr_10y": 12.5
+    },
+    "GM": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "NET": {
+      "cagr_1y": 0.0,
+      "cagr_2y": 0.0,
+      "cagr_5y": 5.0,
+      "cagr_10y": 8.0
+    },
+    "CL": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "CMI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "AZO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "COIN": {
+      "cagr_1y": 12.1,
+      "cagr_2y": 15.3,
+      "cagr_5y": 18.5,
+      "cagr_10y": 12.8
+    },
+    "TRV": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.8,
+      "cagr_10y": 9.5
+    },
+    "AJG": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "AEP": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.1,
+      "cagr_5y": 8.5,
+      "cagr_10y": 9.2
+    },
+    "DB": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "TEL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "NSC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "PWR": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "CSX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "HLT": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "FDX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "CP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "RBLX": {
+      "cagr_1y": 11.5,
+      "cagr_2y": 10.5,
+      "cagr_5y": 9.5,
+      "cagr_10y": 9.0
+    },
+    "ADSK": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "B": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "MSI": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "VRT": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 12.8
+    },
+    "NWG": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "SRE": {
+      "cagr_1y": 6.2,
+      "cagr_2y": 7.5,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.5
+    },
+    "WDAY": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 18.2
+    },
+    "TRI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "KMI": {
+      "cagr_1y": 4.5,
+      "cagr_2y": 6.2,
+      "cagr_5y": 7.8,
+      "cagr_10y": 8.5
+    },
+    "FTNT": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "TFC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "AFL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "MFC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "EOG": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 8.0
+    },
+    "IDXX": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "ALNY": {
+      "cagr_1y": 5.0,
+      "cagr_2y": 8.0,
+      "cagr_5y": 10.0,
+      "cagr_10y": 12.0
+    },
+    "EQNR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 8.8
+    },
+    "WBD": {
+      "cagr_1y": 5.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.5,
+      "cagr_10y": 9.0
+    },
+    "MPC": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "APD": {
+      "cagr_1y": 2.5,
+      "cagr_2y": 4.8,
+      "cagr_5y": 7.2,
+      "cagr_10y": 8.5
+    },
+    "FCX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "CNI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "VST": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ET": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "PYPL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "ROST": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "ARGX": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.1,
+      "cagr_10y": 12.5
+    },
+    "E": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ALL": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "TRP": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "DDOG": {
+      "cagr_1y": 10.2,
+      "cagr_2y": 12.1,
+      "cagr_5y": 15.5,
+      "cagr_10y": 18.2
+    },
+    "BDX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "MPLX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "DLR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "PCAR": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "SLB": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 8.0
+    },
+    "PSX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "ZTS": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "SU": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "VLO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "D": {
+      "cagr_1y": 6.5,
+      "cagr_2y": 7.2,
+      "cagr_5y": 8.1,
+      "cagr_10y": 8.5
+    },
+    "O": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "LHX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "STX": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    },
+    "DEO": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 9.5
+    },
+    "VALE": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 8.0
+    },
+    "F": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "URI": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.1,
+      "cagr_10y": 8.8
+    },
+    "NDAQ": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 9.2,
+      "cagr_5y": 10.5,
+      "cagr_10y": 11.8
+    },
+    "EA": {
+      "cagr_1y": 8.5,
+      "cagr_2y": 10.2,
+      "cagr_5y": 12.1,
+      "cagr_10y": 9.5
+    }
+  }
+}

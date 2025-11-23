@@ -1,0 +1,27 @@
+name: valuepicker
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pandas
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - jupyterlab
+  - notebook
+  - tesseract
+  - pytesseract
+  - pillow
+  - pip:
+    - yfinance
+    - requests
+    - beautifulsoup4
+    - lxml
+    - plotdigitizer
+    - PyPDF2
+    - ta
+    - tqdm
+    - streamlit
+    - plotly
