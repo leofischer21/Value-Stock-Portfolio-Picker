@@ -20,3 +20,20 @@ build/
 *.pyc
 *.pyo
 *.pyd
+
+# Test files (keep tests/ directory, but ignore root-level test files)
+test_*.py
+!tests/
+
+# Temporary scripts
+*_only.py
+*_existing.py
+process_*.py
+transcribe_*.py
+set_*.py
+
+# Data directories (keep structure, but ignore large files)
+data/cache/
+data/youtube/transcripts/*.webm
+data/youtube/transcripts/*.mp3
+data/youtube/transcripts/*.wav

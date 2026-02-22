@@ -30,6 +30,14 @@ except Exception:
 
 logger = logging.getLogger(__name__)
 
+# Import Retry-Logik
+try:
+    from api_utils import fetch_with_retry
+except ImportError:
+    # Fallback wenn api_utils nicht verfügbar
+    def fetch_with_retry(func, *args, **kwargs):
+        return func(*args, **kwargs)
+
 # API-Konfiguration
 APIFY_API_TOKEN = os.environ.get("APIFY_API_TOKEN")  # Apify für Twitter
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
@@ -199,8 +207,20 @@ def _fetch_tweets_apify(ticker: str, days_back: int = 120) -> List[Dict]:
                 "proxyConfig": {"useApifyProxy": True}
             }
             
-            # Starte Actor Run
-            run = client.actor("kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest").call(run_input=run_input)
+            # Starte Actor Run mit Retry-Logik
+            def _call_actor():
+                return client.actor("kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest").call(run_input=run_input)
+            
+            run = fetch_with_retry(
+                _call_actor,
+                max_retries=3,
+                initial_delay=2.0,
+                check_result=lambda r: r is not None
+            )
+            
+            if not run:
+                logger.warning(f"Apify actor call failed for {ticker} after retries")
+                return all_tweets
             
             # Warte auf Completion und hole Ergebnisse
             dataset_id = run["defaultDatasetId"]
@@ -320,6 +340,7 @@ def get_x_sentiment_score_api(tickers: List[str], financials_df: Optional[pd.Dat
     
     results = {}
     failed_tickers = []
+    total_tweets_found = 0  # Zähle gefundene Tweets für Qualitätsprüfung
     
     for i, ticker in enumerate(tickers):
         try:
@@ -329,9 +350,13 @@ def get_x_sentiment_score_api(tickers: List[str], financials_df: Optional[pd.Dat
             # Hole Tweets via Apify
             tweets = _fetch_tweets_apify(ticker)
             
+            # Prüfe ob wirklich Tweets gefunden wurden
+            total_tweets_found += len(tweets) if tweets else 0
+            
             if not tweets:
-                # Keine Tweets gefunden -> neutral
-                results[ticker] = 0.5
+                # Keine Tweets gefunden → wahrscheinlich blockiert
+                logger.debug(f"No tweets found for {ticker} - likely blocked, will use fallback")
+                failed_tickers.append(ticker)
                 continue
             
             # Trenne Preferred Accounts von anderen
@@ -362,6 +387,17 @@ def get_x_sentiment_score_api(tickers: List[str], financials_df: Optional[pd.Dat
         except Exception as e:
             logger.warning(f"X/Twitter API failed for {ticker}: {e}, will use fallback")
             failed_tickers.append(ticker)
+    
+    # Qualitätsprüfung: Wenn zu viele Ticker fehlgeschlagen sind (>50%), verwende Fallback für alle
+    if len(failed_tickers) > len(tickers) * 0.5:
+        logger.warning(f"Too many failed tickers ({len(failed_tickers)}/{len(tickers)} = {len(failed_tickers)/len(tickers)*100:.1f}%), falling back to legacy method for all")
+        return _fallback_to_legacy(tickers, financials_df)
+    
+    # Qualitätsprüfung: Wenn zu wenige Tweets insgesamt gefunden wurden, verwende Fallback
+    avg_tweets_per_ticker = total_tweets_found / len(tickers) if tickers else 0
+    if avg_tweets_per_ticker < 1.0:  # Weniger als 1 Tweet pro Ticker im Durchschnitt
+        logger.warning(f"Too few tweets found ({total_tweets_found} total, {avg_tweets_per_ticker:.1f} per ticker), falling back to legacy method")
+        return _fallback_to_legacy(tickers, financials_df)
     
     # Für fehlgeschlagene Ticker: Fallback auf Legacy
     if failed_tickers:

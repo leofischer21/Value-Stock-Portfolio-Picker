@@ -207,15 +207,19 @@ def update_sentiments_api(tickers: List[str], financials_df: pd.DataFrame, month
     if month is None:
         month = datetime.now().strftime("%Y-%m")
     
-    # Prüfe ob Datei bereits existiert
+    # Prüfe ob Datei bereits existiert (und ob youtube_score vorhanden ist)
     if not force and _file_exists_for_month(month, "scores"):
-        logger.info(f"Sentiment scores for {month} already exist. Loading from file...")
         scores_path = ROOT_DIR / "data" / "scores" / f"{month}.json"
         try:
             with open(scores_path, "r", encoding="utf-8") as f:
                 scores = json.load(f)
-            logger.info(f"Loaded sentiment scores from {scores_path}")
-            return scores
+            # Prüfe ob youtube_score bereits vorhanden ist
+            if "youtube_score" in scores and scores["youtube_score"]:
+                logger.info(f"Sentiment scores (including YouTube) for {month} already exist. Loading from file...")
+                logger.info(f"Loaded sentiment scores from {scores_path}")
+                return scores
+            else:
+                logger.info(f"Sentiment scores for {month} exist but missing YouTube scores. Recalculating...")
         except Exception as e:
             logger.warning(f"Could not load existing scores file: {e}. Recalculating...")
     
@@ -263,12 +267,26 @@ def update_sentiments_api(tickers: List[str], financials_df: pd.DataFrame, month
             from dataroma import get_superinvestor_data
             superinvestor_scores = get_superinvestor_data(universe=tickers)
         
+        # Load YouTube sentiment via API
+        logger.info("Loading YouTube sentiment via YouTube Data API + Groq...")
+        youtube_scores = {}
+        try:
+            from youtube_sentiment import get_youtube_sentiment_score
+            youtube_scores = get_youtube_sentiment_score(tickers, days_back=120, financials_df=financials_df)
+            if not youtube_scores:
+                raise ValueError("No YouTube scores returned")
+            logger.info(f"YouTube API: {len([t for t, s in youtube_scores.items() if s != 0.5])} tickers with non-neutral scores")
+        except Exception as e:
+            logger.warning(f"YouTube API failed: {e}, using neutral scores")
+            youtube_scores = {ticker: 0.5 for ticker in tickers}
+        
         # Combine into single dict
         result = {
             "last_updated": datetime.now().strftime("%Y-%m-%d"),
             "superinvestor_score": superinvestor_scores,
             "reddit_score": reddit_scores,
-            "x_score": x_scores
+            "x_score": x_scores,
+            "youtube_score": youtube_scores
         }
         
         # Save to data/scores/
@@ -504,6 +522,9 @@ def main():
         logger.info("\n[3/5] Updating Sentiments (API)...")
         scores_dict = update_sentiments_api(tickers, financials_df, month=month, force=args.force)
         logger.info(f"Sentiments: {len(scores_dict.get('reddit_score', {}))} tickers")
+        logger.info(f"  - Reddit: {len(scores_dict.get('reddit_score', {}))} tickers")
+        logger.info(f"  - X/Twitter: {len(scores_dict.get('x_score', {}))} tickers")
+        logger.info(f"  - YouTube: {len(scores_dict.get('youtube_score', {}))} tickers")
         
         # 4. Update Extended Scores
         logger.info("\n[4/5] Updating Extended Scores...")

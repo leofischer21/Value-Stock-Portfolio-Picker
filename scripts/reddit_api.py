@@ -30,6 +30,14 @@ except Exception:
 
 logger = logging.getLogger(__name__)
 
+# Import Retry-Logik
+try:
+    from api_utils import fetch_with_retry
+except ImportError:
+    # Fallback wenn api_utils nicht verfügbar
+    def fetch_with_retry(func, *args, **kwargs):
+        return func(*args, **kwargs)
+
 # API-Konfiguration
 APIFY_API_TOKEN = os.environ.get("APIFY_API_TOKEN")
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
@@ -183,8 +191,20 @@ def _fetch_reddit_posts_apify(ticker: str, days_back: int = 120) -> Dict[str, Li
                 "proxy": {"useApifyProxy": True}
             }
             
-            # Starte Actor Run
-            run = client.actor("comchat/reddit-api-scraper").call(run_input=run_input)
+            # Starte Actor Run mit Retry-Logik
+            def _call_actor():
+                return client.actor("comchat/reddit-api-scraper").call(run_input=run_input)
+            
+            run = fetch_with_retry(
+                _call_actor,
+                max_retries=3,
+                initial_delay=2.0,
+                check_result=lambda r: r is not None
+            )
+            
+            if not run:
+                logger.warning(f"Apify actor call failed for {ticker} after retries")
+                return all_posts
             
             # Hole Ergebnisse aus defaultDatasetId (korrekt)
             dataset_id = run["defaultDatasetId"]
@@ -300,6 +320,7 @@ def get_reddit_mentions_api(tickers: List[str], days_back: int = 120, financials
     
     results = {}
     failed_tickers = []
+    total_posts_found = 0  # Zähle gefundene Posts für Qualitätsprüfung
     
     for i, ticker in enumerate(tickers):
         try:
@@ -308,6 +329,16 @@ def get_reddit_mentions_api(tickers: List[str], days_back: int = 120, financials
             
             # Hole Posts für alle Subreddits
             posts_by_subreddit = _fetch_reddit_posts_apify(ticker, days_back)
+            
+            # Prüfe ob wirklich Posts gefunden wurden
+            total_posts = sum(len(posts) for posts in posts_by_subreddit.values())
+            total_posts_found += total_posts
+            
+            if total_posts == 0:
+                # Keine Posts gefunden → wahrscheinlich blockiert
+                logger.debug(f"No posts found for {ticker} - likely blocked, will use fallback")
+                failed_tickers.append(ticker)
+                continue
             
             # Berechne gewichteten Score pro Subreddit
             subreddit_scores = {}
@@ -337,6 +368,17 @@ def get_reddit_mentions_api(tickers: List[str], days_back: int = 120, financials
         except Exception as e:
             logger.warning(f"Reddit API failed for {ticker}: {e}, will use fallback")
             failed_tickers.append(ticker)
+    
+    # Qualitätsprüfung: Wenn zu viele Ticker fehlgeschlagen sind (>50%), verwende Fallback für alle
+    if len(failed_tickers) > len(tickers) * 0.5:
+        logger.warning(f"Too many failed tickers ({len(failed_tickers)}/{len(tickers)} = {len(failed_tickers)/len(tickers)*100:.1f}%), falling back to legacy method for all")
+        return _fallback_to_legacy(tickers, days_back, financials_df)
+    
+    # Qualitätsprüfung: Wenn zu wenige Posts insgesamt gefunden wurden, verwende Fallback
+    avg_posts_per_ticker = total_posts_found / len(tickers) if tickers else 0
+    if avg_posts_per_ticker < 2.0:  # Weniger als 2 Posts pro Ticker im Durchschnitt
+        logger.warning(f"Too few posts found ({total_posts_found} total, {avg_posts_per_ticker:.1f} per ticker), falling back to legacy method")
+        return _fallback_to_legacy(tickers, days_back, financials_df)
     
     # Für fehlgeschlagene Ticker: Fallback auf Legacy
     if failed_tickers:

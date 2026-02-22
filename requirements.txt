@@ -20,3 +20,8 @@ streamlit
 plotly
 httpx
 apify-client
+google-api-python-client
+yt-dlp
+transformers
+torch
+torchaudio
