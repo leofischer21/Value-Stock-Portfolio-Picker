@@ -25,3 +25,6 @@ yt-dlp
 transformers
 torch
 torchaudio
+google-generativeai>=0.3.0
+together>=0.2.0
+cohere>=4.0.0

@@ -531,8 +531,89 @@ def calculate_portfolio_from_monthly_data(
         # Step 2: Combine data
         df = combine_data(tickers_df, financials_df, scores_dict)
         
-        # Step 3: Compute scores with horizon-specific weights
+        # Step 3: Compute scores with horizon-specific weights (initial, ohne committee_score)
         scored_df = compute_scores_with_horizon(df, horizon=horizon, min_market_cap=min_market_cap)
+        
+        # Step 3.5: LLM Committee Evaluation (nur für Top 20)
+        # Wähle Top 20 basierend auf initialem final_score
+        top_tickers = scored_df.head(portfolio_size)['ticker'].tolist()
+        logger.info(f"Running LLM committee evaluation for {len(top_tickers)} tickers")
+        
+        committee_scores = {}
+        try:
+            from llm_committee import get_llm_committee_score
+            committee_scores = get_llm_committee_score(top_tickers, scored_df)
+            
+            # Füge committee_score zu DataFrame hinzu
+            scored_df['committee_score'] = scored_df['ticker'].map(committee_scores).fillna(0.5)
+            logger.info(f"LLM committee scores calculated for {len(committee_scores)} tickers")
+        except Exception as e:
+            logger.warning(f"LLM committee evaluation failed: {e}, using neutral scores")
+            scored_df['committee_score'] = 0.5
+        
+        # Step 3.6: Recalculate final_score mit committee_score (25% Gewichtung)
+        if 'committee_score' in scored_df.columns:
+            weights = HORIZON_WEIGHTS.get(horizon, HORIZON_WEIGHTS["2 Jahre"])
+            committee_weight = 0.25  # 25% Gewichtung für committee_score
+            
+            # Berechne Summe der bestehenden Gewichtungen
+            base_weight_sum = sum([
+                weights.get('value', 0),
+                weights.get('quality', 0),
+                weights.get('community', 0),
+                weights.get('pe_vs_history', 0),
+                weights.get('insider', 0),
+                weights.get('analyst', 0),
+                weights.get('ki_moat', 0)
+            ])
+            
+            # Skaliere bestehende Gewichtungen (75% bleiben für andere Scores)
+            remaining_weight = 1.0 - committee_weight
+            if base_weight_sum > 0:
+                scaled_weights = {k: v * (remaining_weight / base_weight_sum) for k, v in weights.items()}
+            else:
+                scaled_weights = weights
+            
+            # Use ai_moat_score (which may fall back to ki_moat_score)
+            moat_score = scored_df.get('ai_moat_score', scored_df.get('ki_moat_score', 0.5))
+            if 'ai_moat_score' in scored_df.columns:
+                moat_score = scored_df['ai_moat_score']
+            elif 'ki_moat_score' in scored_df.columns:
+                moat_score = scored_df['ki_moat_score']
+            else:
+                moat_score = pd.Series([0.5] * len(scored_df))
+            
+            # Neu berechnen mit committee_score
+            scored_df['final_score'] = (
+                scored_df['value_score'] * scaled_weights.get('value', 0) +
+                scored_df['quality_score'] * scaled_weights.get('quality', 0) +
+                scored_df['community_score'] * scaled_weights.get('community', 0) +
+                scored_df['pe_vs_history_score'] * scaled_weights.get('pe_vs_history', 0) +
+                scored_df['insider_score'] * scaled_weights.get('insider', 0) +
+                scored_df['analyst_score'] * scaled_weights.get('analyst', 0) +
+                moat_score * scaled_weights.get('ki_moat', 0) +
+                scored_df['committee_score'] * committee_weight
+            )
+            
+            # Sektor-Penalty (wie vorher)
+            value_sector_penalties = {
+                'Financial Services': -0.08,
+                'Energy': -0.08,
+                'Utilities': -0.05,
+                'Real Estate': -0.05,
+            }
+            
+            if 'sector' in scored_df.columns:
+                for sector, penalty in value_sector_penalties.items():
+                    mask = scored_df['sector'] == sector
+                    scored_df.loc[mask, 'final_score'] = scored_df.loc[mask, 'final_score'] + penalty
+            
+            # Ensure final_score stays in reasonable range
+            scored_df['final_score'] = scored_df['final_score'].clip(lower=0.0, upper=1.0)
+            
+            # Neu sortieren basierend auf aktualisiertem final_score
+            scored_df = scored_df.sort_values('final_score', ascending=False)
+            logger.info("Final scores recalculated with LLM committee scores")
         
         # Step 4: Construct portfolio
         from portfolio import construct_portfolio

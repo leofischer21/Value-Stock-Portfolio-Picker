@@ -20,6 +20,15 @@ YOUTUBE_API_KEY=your_youtube_api_key_here
 # YouTube Channel IDs (optional, komma-separiert)
 # Falls nicht gesetzt, wird Standard-Liste verwendet (z.B. Joseph Carlson)
 YOUTUBE_CHANNEL_IDS=UCwDlyuX3Fkg5WNBufLnH6dw,UCxxxxx,UCyyyyy
+
+# LLM Committee APIs (optional, kostenlos)
+# Für LLM-Komitee-Bewertung der Top 20 Aktien
+HUGGINGFACE_API_KEY=your_hf_token_here
+TOGETHER_API_KEY=your_together_key_here
+GEMINI_API_KEY=your_gemini_key_here
+OPENAI_API_KEY=your_openai_key_here
+ANTHROPIC_API_KEY=your_anthropic_key_here
+COHERE_API_KEY=your_cohere_key_here
 ```
 
 ## API-Setup Anleitungen
@@ -57,6 +66,86 @@ Bereits vorhanden - wird für Sentiment-Analyse verwendet.
 - Standard: Joseph Carlson (`UCwDlyuX3Fkg5WNBufLnH6dw`)
 - Weitere Kanäle: Füge `YOUTUBE_CHANNEL_IDS` in `.env` hinzu (komma-separiert)
 - Oder bearbeite `scripts/youtube_sentiment.py` direkt
+
+### 5. LLM Committee APIs (Optional, kostenlos)
+
+Das LLM-Komitee-System bewertet die Top 20 ausgewählten Aktien mit mehreren kostenlosen LLMs.
+
+#### Hugging Face Inference API
+
+1. Gehe zu https://huggingface.co/settings/tokens
+2. Erstelle ein kostenloses Konto (falls noch nicht vorhanden)
+3. Erstelle einen neuen Token (read access)
+4. Füge ihn als `HUGGINGFACE_API_KEY` in `.env` ein
+
+**Kosten**: Kostenlos (free tier, ~30 requests/min)
+
+**Verwendete Modelle**: `mistralai/Mistral-7B-Instruct-v0.2`
+
+#### Together AI
+
+1. Gehe zu https://api.together.xyz/
+2. Erstelle ein kostenloses Konto
+3. Gehe zu API Keys
+4. Kopiere deinen API Key
+5. Füge ihn als `TOGETHER_API_KEY` in `.env` ein
+
+**Kosten**: Kostenlos (free tier, ~100 requests/day)
+
+**Verwendete Modelle**: `meta-llama/Llama-3-8b-chat-hf`
+
+#### Google Gemini
+
+1. Gehe zu https://makersuite.google.com/app/apikey
+2. Erstelle ein kostenloses Konto (falls noch nicht vorhanden)
+3. Erstelle einen neuen API Key
+4. Füge ihn als `GEMINI_API_KEY` in `.env` ein
+
+**Kosten**: Kostenlos (free tier, 60 requests/min)
+
+**Verwendete Modelle**: `gemini-pro`
+
+#### OpenAI (GPT-3.5-turbo)
+
+1. Gehe zu https://platform.openai.com/api-keys
+2. Erstelle ein kostenloses Konto (falls noch nicht vorhanden)
+3. Erstelle einen neuen API Key
+4. Füge ihn als `OPENAI_API_KEY` in `.env` ein
+
+**Kosten**: Kostenlos (free tier, $5 Startguthaben, dann Pay-as-you-go)
+
+**Verwendete Modelle**: `gpt-3.5-turbo`
+
+**Persona**: Growth Optimist (Fokus auf Wachstum, Innovation, Zukunftspotential)
+
+#### Anthropic Claude
+
+1. Gehe zu https://console.anthropic.com/
+2. Erstelle ein kostenloses Konto (falls noch nicht vorhanden)
+3. Gehe zu API Keys
+4. Erstelle einen neuen API Key
+5. Füge ihn als `ANTHROPIC_API_KEY` in `.env` ein
+
+**Kosten**: Kostenlos (free tier, $5 Startguthaben, dann Pay-as-you-go)
+
+**Verwendete Modelle**: `claude-3-5-sonnet-20241022`
+
+**Persona**: Risk Analyst (Detaillierte Risikoanalyse, Szenario-Planung)
+
+#### Cohere
+
+1. Gehe zu https://dashboard.cohere.com/api-keys
+2. Erstelle ein kostenloses Konto (falls noch nicht vorhanden)
+3. Erstelle einen neuen API Key
+4. Füge ihn als `COHERE_API_KEY` in `.env` ein
+
+**Kosten**: Kostenlos (free tier, ~100 requests/min)
+
+**Verwendete Modelle**: `command`
+
+**Persona**: Momentum Trader (Markttrends, Momentum, technische Signale)
+
+**Hinweis**: Das LLM-Komitee funktioniert auch nur mit Groq (bereits vorhanden). Die anderen APIs sind optional und verbessern die Robustheit durch mehr LLMs. Mit allen 7 LLMs (Groq, Hugging Face, Together, Gemini, OpenAI, Anthropic, Cohere) erhältst du die beste Diversität und robusteste Scores.
 
 ## Fallback-Mechanismus
 
