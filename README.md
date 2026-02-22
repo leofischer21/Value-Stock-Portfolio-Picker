@@ -31,7 +31,7 @@ conda env create -f environment.yml
 conda activate valuepicker
 
 # 3. Portfolio berechnen (neue CSV mit Timestamp wird erstellt)
-python src/run_picker.py
+python scripts/run_picker.py
 
 # 4. Dashboard starten
-streamlit run dashboard_final.py
+streamlit run app/dashboard_final.py
