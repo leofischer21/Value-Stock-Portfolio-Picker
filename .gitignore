@@ -37,3 +37,6 @@ data/cache/
 data/youtube/transcripts/*.webm
 data/youtube/transcripts/*.mp3
 data/youtube/transcripts/*.wav
+
+# Embedded git repositories
+Value-Stock-Portfolio-Picker/
